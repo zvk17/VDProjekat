@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj novi recept</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-8 col-lg-4">                
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">Dodaj recept</h1>
+                    </div>                        
+                </div> 
+                <div class="row mb-3">
+                    <label for="dish-name" class="col-sm-4 col-form-label">Ime jela:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="dish-name">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dish-type" class="col-sm-4 col-form-label">Vrsta jela:</label>
+                    <div class="col-sm-8">
+                        <select id="dish-type" class="form-control">
+                            <option value="P" selected>Predjelo</option>
+                            <option value="G">Glavno jelo</option>
+                            <option value="D">Desert</option>
+                            <option value="U" >Užina</option>                            
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dish-level" class="col-sm-4 col-form-label">Nivo težine:</label>
+                    <div class="col-sm-8">
+                        <select id="dish-level" class="form-control">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>   
+                            <option value="5">5</option>                           
+                        </select>
+                    </div>
+                </div> 
+                <div class="mb-3">
+                    <label for="dish-description" class="form-label">Opis jela:</label>
+                    <textarea class="form-control" id="dish-description" rows="3"></textarea>
+                  </div>                                
+            </div>            
+        </div>
+    </div>
+</body>
+</html>
