@@ -76,6 +76,8 @@ $(document).ready(function() {
             return;
         }
 
+        localStorage.setItem('tekuciKorisnik', JSON.stringify(pronadjenKorisnik));
+
         window.location.href = "../../index.html";
     }
 

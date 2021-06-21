@@ -101,13 +101,17 @@ $(document).ready(function() {
                 $("#korisnickoImeGreska").text("Korisničko ime već postoji.");
                 $("#korisnickoImeGreska").show();
             } else {
-                korisnici.push({
+                let noviKorisnik = {
                     ime: ime,
                     prezime: prezime,
                     korisnickoIme: korisnickoIme,
                     lozinka: lozinka
-                });
+                };
+                korisnici.push(noviKorisnik);
+
                 localStorage.setItem("korisnici", JSON.stringify(korisnici));
+                localStorage.setItem('tekuciKorisnik', JSON.stringify(noviKorisnik));
+                
                 window.location.href = "../../index.html";
             }
         }
