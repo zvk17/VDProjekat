@@ -1,3 +1,4 @@
+/*
 class Recipe {
     constructor(name, duration, description, level) {
         this.comments = [];
@@ -27,4 +28,4 @@ class Recipe {
         }
     }
 
-}
+}*/
