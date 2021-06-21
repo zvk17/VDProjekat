@@ -49,8 +49,18 @@ $(document).ready(()=>{
 
 
         let recipes = loadORInitRecipes();
+        let maxId = recipes.reduce(
+            (max,recipe) => Math.max(max,recipe.id), 0
+        );
+        maxId++;
         recipes.push({
-
+            id: maxId,
+            name: name,
+            duration: duration,
+            description: description,
+            type: type,
+            level: parseInt(level),
+            comments: []
         });
         localStorage.setItem("recipes", JSON.stringify(recipes));
     });
@@ -60,9 +70,16 @@ $(document).ready(()=>{
         if (recipes == null) {
             recipes = [
                 {
-
+                    id: 1,
+                    name: "Losos na zaru",
+                    duration: "30min",
+                    description: "opis kako kreirati lososa na žaru",
+                    type: "G",
+                    level: 4,
+                    comments: []
                 }
             ];
+            localStorage.setItem("recipes", JSON.stringify(recipes));
         } else {
             recipes = JSON.parse(recipes);
         }
