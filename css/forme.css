@@ -1,0 +1,15 @@
+.polje {
+    border-radius: 100px;
+}
+
+.moja-tabela {
+    vertical-align: middle;
+}
+
+.prijava {
+    vertical-align: middle;
+}
+
+.greska {
+    font-size: 12px;    
+}
