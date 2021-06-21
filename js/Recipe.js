@@ -13,10 +13,16 @@ class Recipe {
     static load() {
         let r = localStorage.getItem("recipes");
         if (r != null) {
+            let recipes = [];
             r = JSON.parse(r);
             for (let recipe of recipes) {
-                console.log(recipe);
-                //TODO obraditi ih
+                let newRecipe = new Recipe(
+                    recipe.name,
+                    recipe.duration, 
+                    recipe.description,
+                    recipe.level                
+                );
+                newRecipe.comments = comments;
             }
         }
     }

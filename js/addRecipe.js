@@ -38,5 +38,7 @@ $(document).ready(()=>{
         }
         $dishError.addClass("d-none");
         $dishError.empty();
+
+        
     });
 });
