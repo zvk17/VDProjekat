@@ -39,7 +39,12 @@ function loadORInitRecipes() {
                 type: "G",
                 level: 3,
                 comments: [],
-                reviews: []
+                reviews: [
+                    {
+                        idUser: 3,
+                        mark: 2
+                    }
+                ]
             }, {
                 id: 4,
                 name: "Piletina sa šampinjonima",
@@ -57,35 +62,10 @@ function loadORInitRecipes() {
     }
     return recipes;
 }
-
-/*
-class Recipe {
-    constructor(name, duration, description, level) {
-        this.comments = [];
-        this.name = name;
-        this.duration = duration;
-        this.description = description;
-        this.level = level;
+function getReviewValue(recipe) {
+    let review = recipe.reviews.reduce((accum,review) => accum + review.mark, 0);
+    if (recipe.reviews.length > 0) {
+        review = Math.round((1.0 * review / recipe.reviews.length) * 10) / 10.0;
     }
-    static recipes = [];
-    static save() {
-        localStorage.setItem("recipes", JSON.stringify(Recipe.recipes));
-    }
-    static load() {
-        let r = localStorage.getItem("recipes");
-        if (r != null) {
-            let recipes = [];
-            r = JSON.parse(r);
-            for (let recipe of recipes) {
-                let newRecipe = new Recipe(
-                    recipe.name,
-                    recipe.duration, 
-                    recipe.description,
-                    recipe.level                
-                );
-                newRecipe.comments = comments;
-            }
-        }
-    }
-
-}*/
+    return review;
+}

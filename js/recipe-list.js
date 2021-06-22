@@ -1,42 +1,87 @@
-let messages = {
-    HARDNESS_LEVEL: "Nivo težine: ",
-    REVIEW: "Ocena: "
-}
+let recipes = loadORInitRecipes();
+recipes = recipes.filter(recipe => recipe.type == RECIPE_TYPE);
+
 function recipeItem(recipe) {
     let commentsNumber = recipe.comments.length;
-    let review = recipe.reviews.reduce((accum,review) => accum + review.mark, 0);
-    if (recipe.reviews.length > 0) {
-        review = Math.round((1.0 * review / recipe.reviews.length) * 10) / 10.0;
-    }
-    let $div = $("<div>").addClass("col-12 col-lg-9 col-md-10 recipe-item");
-    let $header = $("<h3>").text(recipe.name);
+    let review = getReviewValue(recipe);
+    let $div = $("<div>").addClass("col-12 recipe-item");
+    let $header = $("<div>").addClass("col-11");
+    $header.append($("<h3>").text(recipe.name));
     let $link = $("<a>")
         .addClass("row")
         .attr("href", "recept.html?idRecept=" + recipe.id);
-    let $hardness = $("<div>").text(messages.HARDNESS_LEVEL + recipe.level);
-    let $review = $("<div>").text(messages.REVIEW + review);
-    let $commentsNumber = $("<span></span>").text(commentsNumber).addClass("broj-komentara");
-    
+    let $hardness = $("<div>")
+        .addClass("col-12")
+        .text(messages.HARDNESS_LEVEL + recipe.level);
+    let $review = $("<div>")
+        .addClass("col-12")
+        .text(messages.REVIEW + review);
+
+    let $commentsNumber = $("<span>")
+        .text(commentsNumber)
+        .addClass("broj-komentara");
+    let $commentsDiv = $("<div>")
+        .addClass("col-1 text-right")
+        .append($commentsNumber);
+    let $authorDiv = $("<div>").addClass("col-12").text(messages.AUTHOR + "pera peric");
     
     $link.append($header);
     
-    $link.append($commentsNumber);
+    $link.append($commentsDiv);
     $link.append($hardness);
     $link.append($review);
+    $link.append($authorDiv);
     $div.append($link);
     return $div;
 }
 
+function sortDefault(recipes) {
+    return recipes;
+}
+function sortByHardness(recipes) {
+    return recipes.sort((a,b)=>{
+        return a.level - b.level;
+    });
+}
+function sortByReview(recipes) {
+    return recipes.sort((a,b)=>{
+        return getReviewValue(b) - getReviewValue(a);
+    });
+}
+let sortRecipes = sortDefault;
 
-$(document).ready(()=>{
+function insertRecipes(recipes) {
     let $list = $("#recipe-list");
-    let recipes = loadORInitRecipes();
-    recipes = recipes.filter(recipe => recipe.type == RECIPE_TYPE);
-
     let $recipes = recipes.map(recipeItem);
-    
+    $list.empty();
     $recipes.forEach($recipe => {
         $list.append($recipe);
     });
-    console.log(recipes);
+}
+function showRecipes() {
+    let r = sortRecipes(recipes.slice());
+    insertRecipes(r);
+}
+$(document).ready(()=>{
+    let $recipeSort = $("#recipe-sort");    
+    $recipeSort.on("change",()=>{
+        let sortValue = $recipeSort.val();
+        console.log(sortValue);
+        switch (sortValue) {
+            case "N":
+                sortRecipes = sortDefault;
+                break;
+            case "L":
+                sortRecipes = sortByHardness;
+                break;    
+            case "R":
+                sortRecipes = sortByReview;
+                break;
+            default:
+                sortRecipes = sortDefault;
+                break;
+        }
+        showRecipes();
+    });
+    showRecipes();
 });
