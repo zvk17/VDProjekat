@@ -7,21 +7,176 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/bootstrap.js"></script>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="css/stil.css">
     <title>Početna</title>
 </head>
 <body>
-    <header>
-
-    </header>
-    <main>
-
-    </main>
-    <footer class="text-center">
-
-        <p>Copyright 2021, Sreten Živković 0008/2018, Slobodan Katanić 0133/2018, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
-            
-            Univerziteta u Beogradu</p>
-    </footer>
+    <div class="container-fluid p-0 overflow-hidden">
+        <div class="row">
+            <div class="col header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">LOGO</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Početna
+                                        <!-- <span class="sr-only">(current)</span> -->
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                                        Recepti
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="./html/sr/predjela.html">Predjelo</a>
+                                        <a class="dropdown-item" href="./html/sr/glavnajela.html">Glavno jelo</a>
+                                        <a class="dropdown-item" href="./html/sr/deserti.html">Desert</a>
+                                        <a class="dropdown-item" href="./html/sr/uzine.html">Užina</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Dodaj recept</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Moj nalog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">O nama</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>    
+        <div class="row pl-5 pr-5 mt-5">
+            <div class="col-lg-9 col-md-12">
+                <div id="carouselExampleIndicators" class="carousel slide w-100" data-ride="carousel">
+                    <!-- <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol> -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">                          
+                            <div class="carousel-caption d-none d-md-block d-flex">
+                                <h2>Losos na žaru</h2>
+                                <p>Ocena: 5.0</p>
+                            </div>    
+                            <img class="w-100 d-block img-fluid recept-slika" src="slike/glavna jela/losos.jpg" alt="Second slide">
+                        </div>
+                      <div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Ćevapi sa roštilja</h2>
+                            <p>Ocena: 4.9</p>                            
+                        </div>    
+                        <img class="w-100 d-block img-fluid recept-slika" src="slike/glavna jela/cevapi.jpg" alt="First slide">                        
+                      </div>                      
+                      <div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Tiramisu</h3>
+                            <p>Ocena: 4.8</p>
+                        </div>    
+                        <img class="w-100 d-block img-fluid recept-slika" src="slike/deserti/tiramisu.jpg" alt="Third slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <table class="table">
+                    <tr>
+                        <th>Kulinarski kursevi</th>
+                    </tr>
+                    <tr>
+                        <td>Kurs1</td>
+                    </tr>
+                    <tr>
+                        <td>Kurs2</td>
+                    </tr>
+                    <tr>
+                        <td>Kurs3</td>
+                    </tr>                    
+                </table>
+            </div>
+        </div>
+        <div class="row mb-0 pb-0 mt-5 pl-5 ml-2">
+            <div class="col">
+                <h3>Popularni kulinarski blogovi</h3>
+            </div>
+        </div>
+        <div class="row ml-auto mr-auto pl-5 pr-5">
+            <div class="col-lg-3 col-md-6 col-sm-12 p-0">                
+                <table class="table">
+                    <tr>
+                        <td><img class="img-fluid" src="slike/blogovi/mytastypot.jpeg" class="blog-slika"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5>
+                                My tasty pot Hrana koja ostavlja utisak
+                            </h5>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-0">                
+                <table class="table">
+                    <tr>
+                        <td><img class="img-fluid" src="slike/blogovi/milinkuvar.jpeg" class="blog-slika"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5>Milin kuvar Od smutija do pikantnog džema</h5>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-0">                
+                <table class="table">
+                    <tr>
+                        <td><img class="img-fluid" src="slike/blogovi/mojegrne.jpeg" class="blog-slika"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5>Moje grne Hrana za dušu</h5>                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-0">                
+                <table class="table">
+                    <tr>
+                        <td><img class="img-fluid" src="slike/blogovi/mimi.jpeg" class="blog-slika"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5>Mimi’s kingdom Neobična a svakodnevna kuhinja</h5>                            
+                        </td>
+                    </tr>
+                </table>
+            </div>            
+        </div>
+        <div class="row footer">
+            <div class="col">
+                <hr>
+                <p>Copyright 2021, Sreten Živković 0008/2018, Slobodan Katanić 0133/2018, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+                    Univerziteta u Beogradu</p>
+            </div>
+        </div>    
+    </div>
 </body>
 </html>
