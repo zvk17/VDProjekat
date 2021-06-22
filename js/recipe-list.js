@@ -1,14 +1,26 @@
 let messages = {
-    HARDNESS_LEVEL: "Nivo težine"
+    HARDNESS_LEVEL: "Nivo težine: ",
+    REVIEW: "Ocena: "
 }
 function recipeItem(recipe) {
-    let $div = $("<div>").addClass("col-12 col-lg-9");
+    let commentsNumber = recipe.comments.length;
+    let review = recipe.reviews.reduce((accum,review) => accum + review.mark, 0);
+    if (recipe.reviews.length > 0) {
+        review = Math.round((1.0 * review / recipe.reviews.length) * 10) / 10.0;
+    }
+    let $div = $("<div>").addClass("col-12 col-lg-9 recipe-item");
     let $header = $("<h3>").text(recipe.name);
     let $link = $("<a>").attr("href", "recept.html?idRecept=" + recipe.id);
-    let $div2 = $("<div>").text(messages.HARDNESS_LEVEL + ": " + recipe.level);
+    let $hardness = $("<div>").text(messages.HARDNESS_LEVEL + recipe.level);
+    let $review = $("<div>").text(messages.REVIEW + review);
+    let $commentsNumber = $("<span></span>").text(commentsNumber).addClass("broj-komentara");
+    
+    
     $link.append($header);
     $div.append($link);
-    $div.append($div2);
+    $div.append($commentsNumber);
+    $div.append($hardness);
+    $div.append($review);
     return $div;
 }
 

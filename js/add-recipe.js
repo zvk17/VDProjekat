@@ -65,7 +65,8 @@ $(document).ready(()=>{
             type: type,
             level: parseInt(level),
             userId: currentUser.id,
-            comments: []
+            comments: [],
+            reviews: []
         });
         localStorage.setItem("recipes", JSON.stringify(recipes));
     });

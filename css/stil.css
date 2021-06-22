@@ -31,3 +31,26 @@
     opacity: 0.8;
 }
 
+.broj-komentara {
+    position: relative;
+    color: #fff;
+    background: black;
+    font-size: 10px;
+    font-weight: 600;   
+    padding: 2px 5px;
+    text-align: center;
+    min-width: 20px;
+    display: inline-block;
+}
+.broj-komentara::after, .broj-komentara:after {
+    border-left: 0px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 6px solid black;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -6px;
+    left: 35%;
+    
+}

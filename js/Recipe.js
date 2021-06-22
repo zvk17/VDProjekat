@@ -9,7 +9,19 @@ function loadORInitRecipes() {
                 description: "opis kako napraviti lososa na žaru",
                 type: "G",
                 level: 4,
-                comments: []
+                comments: [],
+                reviews: [
+                    {
+                        idUser: 4,
+                        mark: 3
+                    }, {
+                        idUser: 3,
+                        mark: 3
+                    }, {
+                        idUser: 3,
+                        mark: 5
+                    }
+                ]
             }, {
                 id: 2,
                 name: "Palačinke",
@@ -17,7 +29,8 @@ function loadORInitRecipes() {
                 description: "opis kako napraviti palačinke",
                 type: "D",
                 level: 2,
-                comments: []
+                comments: [],
+                reviews: []
             }, {
                 id: 3,
                 name: "Ćufte",
@@ -25,7 +38,8 @@ function loadORInitRecipes() {
                 description: "opis kako spremiti ćufte",
                 type: "G",
                 level: 3,
-                comments: []
+                comments: [],
+                reviews: []
             }, {
                 id: 4,
                 name: "Piletina sa šampinjonima",
@@ -33,7 +47,8 @@ function loadORInitRecipes() {
                 description: "opis kako spremiti piletinu",
                 type: "G",
                 level: 5,
-                comments: []
+                comments: [],
+                reviews: []
             }
         ];
         localStorage.setItem("recipes", JSON.stringify(recipes));
