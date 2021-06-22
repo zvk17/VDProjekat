@@ -1,3 +1,48 @@
+function loadORInitRecipes() {
+    let recipes = localStorage.getItem("recipes");
+    if (recipes == null) {
+        recipes = [
+            {
+                id: 1,
+                name: "Losos na zaru",
+                duration: "30min",
+                description: "opis kako napraviti lososa na žaru",
+                type: "G",
+                level: 4,
+                comments: []
+            }, {
+                id: 2,
+                name: "Palačinke",
+                duration: "15min",
+                description: "opis kako napraviti palačinke",
+                type: "D",
+                level: 2,
+                comments: []
+            }, {
+                id: 3,
+                name: "Ćufte",
+                duration: "45min",
+                description: "opis kako spremiti ćufte",
+                type: "G",
+                level: 3,
+                comments: []
+            }, {
+                id: 4,
+                name: "Piletina sa šampinjonima",
+                duration: "1h 30min",
+                description: "opis kako spremiti piletinu",
+                type: "G",
+                level: 5,
+                comments: []
+            }
+        ];
+        localStorage.setItem("recipes", JSON.stringify(recipes));
+    } else {
+        recipes = JSON.parse(recipes);
+    }
+    return recipes;
+}
+
 /*
 class Recipe {
     constructor(name, duration, description, level) {

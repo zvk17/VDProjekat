@@ -65,24 +65,5 @@ $(document).ready(()=>{
         localStorage.setItem("recipes", JSON.stringify(recipes));
     });
 
-    function loadORInitRecipes() {
-        let recipes = localStorage.getItem("recipes");
-        if (recipes == null) {
-            recipes = [
-                {
-                    id: 1,
-                    name: "Losos na zaru",
-                    duration: "30min",
-                    description: "opis kako kreirati lososa na žaru",
-                    type: "G",
-                    level: 4,
-                    comments: []
-                }
-            ];
-            localStorage.setItem("recipes", JSON.stringify(recipes));
-        } else {
-            recipes = JSON.parse(recipes);
-        }
-        return recipes;
-    }
+    
 });
