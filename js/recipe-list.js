@@ -23,7 +23,7 @@ function recipeItem(recipe) {
     let $commentsDiv = $("<div>")
         .addClass("col-1 text-right")
         .append($commentsNumber);
-    let $authorDiv = $("<div>").addClass("col-12").text(messages.AUTHOR + "pera peric");
+    let $authorDiv = $("<div>").addClass("col-12").text(messages.AUTHOR + "HARDKODOVANO");
     
     $link.append($header);
     
