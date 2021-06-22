@@ -4,23 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O nama</title>
-    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">    
     <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/bootstrap.js"></script>    
+    <link rel="stylesheet" href="../../css/stil.css">
+    <title>O nama</title>    
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid p-0 overflow-hidden">
         <div class="row">
-            <div class="col-12 text-center">
-                <h1>O nama</h1>
+            <div class="col header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">LOGO</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../index.html">Početna
+                                        <!-- <span class="sr-only">(current)</span> -->
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                                        Recepti
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="./html/sr/predjela.html">Predjelo</a>
+                                        <a class="dropdown-item" href="./html/sr/glavnajela.html">Glavno jelo</a>
+                                        <a class="dropdown-item" href="./html/sr/deserti.html">Desert</a>
+                                        <a class="dropdown-item" href="./html/sr/uzine.html">Užina</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Dodaj recept</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="moj_nalog.html">Moj nalog</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">O nama</a>
+                                </li>                                
+                                <li class="nav-item ml-lg-5 ml-md-0">
+                                    <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
+                                </li>                
+                            </ul>
+                        </div>                        
+                    </div>
+                </nav>
             </div>
-        
+        </div>
+        <div class="row mt-5 o-nama">
+            <div class="col-12 mb-3">
+                <h2 class="font-weight-bold">
+                    Šta je to što nas izdvaja od ostalih?
+                </h2>
+            </div>
+            <div class="col-12 mb-3 centrirano">
+                Naš sajt je namenjen svima koji vole kuhinju,
+                vole da spremaju hranu, koji su maštoviti i žele svoje ideje da 
+                prikažu drugima, kao i da vide ideje drugih ljudi koji su kao i oni zaljubljeni u kuhinju.
+                Uvek smo otvoreni za saradnju i zalažemo se za medjusobnu saradnju - da pomažemo jedni drugima i 
+                učinima našu planetu boljim mesto za život. Veoma smo zahvalni svima koji posete naš sajt.                
+            </div>
+            <div class="col-12 centrirano">
+                Korisnici mogu dodati recepte po svojoj želji na naš sajt. Nije nam bitno kakvi su 
+                recepti bitno je samo da postoji želja i volja. Pored svakog recepta koirisnici mogu 
+                ostaviti svoj komentar kojim će pohvaliti ili posavetovati ili dati neku kritiku (što se redje dešsava)    
+                na nečiji recept, ali bitno je da budemo kritičari i samokrtičari Korisnici mogu i oceniti recepte.
+                Cilj nam je da izgradimo zajednicu koja će postati kao jedna porodica. Posetioci sajta 
+                mogu videti i naše preporuke za kulinarske blogove i kulnarske kurseve za one koji žele 
+                ozbiljnije da se upuste u celu priču.
+            </div>
+        </div>
+        <div class="row pl-5 pr-5 mt-5">
+            <div class="col-12 text-center mb-5">
+                <h3>Nagrade koje je naš sajt do sada osvojio:</h3>
+            </div>                
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-5">
+                <h4>Elementator</h4>
+                <div>Top 10 sajtova za jun 2021</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-5">
+                <h4>Awwwards</h4>
+                <div>Počasno priznanje</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-5">
+                <h4>CSS Design Awards</h4>
+                <div>Sajt dana</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-5">
+                <h4>Mindsparkle</h4>
+                <div>Sajt dana</div>
+            </div>
+        </div>
+        <div class="row pl-5 pr-5">                    
             <div class="col-12 d-flex justify-content-center">
                 <iframe width="600" height="500" 
                     src="https://maps.google.com/maps?q=Elektrotehnicki%20fakultet,%20Beograd&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0"
                      scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
         </div>
+        <div class="row footer">
+            <div class="col">
+                <p id="autori" class="p-0 m-0 mt-4">Sreten Živković 0008/2018, Slobodan Katanić 0133/2018</p><br>
+                <p id="fakultet" class="p-0 m-0">Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+                    Univerziteta u Beogradu</p><br>
+                <p class="p-0 m-0 mb-3">©Copyright 2021</p>
+            </div>
+        </div>    
     </div>
 </body>
 </html>

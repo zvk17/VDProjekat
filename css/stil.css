@@ -5,8 +5,11 @@
 }
 
 .footer {
-    margin-top: auto;
+    margin-top: 100px;    
     text-align: center;
+    background-color: #343a40;
+    color: lightgray;
+    font-size: 14px;
 }
 
 .footer hr {
@@ -15,8 +18,8 @@
 
 .blog-slika {
     object-fit: cover;
-    width: 400px;  
-    height: 210px; 
+    /* width: 400px;   */
+    height: 200px; 
     border-radius: 5px;
 }
 
@@ -73,4 +76,65 @@
 .recipe-item:hover {
     background: rgb(235, 235, 235);
     border: 1px solid rgb(210, 210, 210);
+
+.blogovi a:link {
+    color: #17a2b8;
+}
+
+.blogovi a:visited {
+    color: #17a2b8;
+}
+
+.blogovi a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.blogovi td, .kursevi th {
+    border-bottom: 0px;
+    border-top: 0px;
+}
+
+.blogovi img {
+    border-radius: 10px;
+}
+
+.kursevi a:link {
+    color: black;
+}
+
+.kursevi a:visited {
+    color: black;
+}
+
+.kursevi a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+#autori, #fakultet {
+    font-size: 15px;    
+}
+
+#circle-inicijali {
+    width: 50%;    
+    border-radius: 50%;
+
+    text-align: center;
+    color: white;
+
+    margin-top: 5%;
+    margin-right: 23%;
+    margin-left: 23%;
+    position: absolute;
+
+}
+
+.o-nama {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.centrirano {
+    text-align: justify;
 }
