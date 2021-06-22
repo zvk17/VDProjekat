@@ -4,7 +4,8 @@ $(document).ready(function() {
             ime: "Petar",
             prezime: "Petrovic",
             korisnickoIme: "petar",
-            lozinka: "petar123"
+            lozinka: "petar123",
+            id: 1
         }
     ]
 

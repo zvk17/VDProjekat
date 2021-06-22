@@ -24,8 +24,12 @@ $(document).ready(()=>{
 
         // TODO korisnik mora biti ulogovan
         console.error("Korisnik mora biti ulogovan");
-        if (false) {
+        let currentUser = localStorage.getItem("tekuciKorisnik");
+
+        if (currentUser == null) {
             errorMessage += messages.NOT_LOGGED_IN + "<br />";
+        } else {
+            currentUser = JSON.parse(currentUser);
         }
 
         if (name.length < 4) {
@@ -60,6 +64,7 @@ $(document).ready(()=>{
             description: description,
             type: type,
             level: parseInt(level),
+            userId: currentUser.id,
             comments: []
         });
         localStorage.setItem("recipes", JSON.stringify(recipes));
