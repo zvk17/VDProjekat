@@ -82,17 +82,17 @@ $(document).ready(function() {
             if (ocena > 0.0) {
                 ocena /= parseFloat(tekuciRecepti[i].ocene.length);
             }                        
-            if (recept1 == null || ocena > ocena1) {
-                recept1 = tekuciRecepti[i];
+            if (recept1 == null || ocena > ocena1) {                
                 ocena3 = ocena2;
                 recept3 = recept2;
                 ocena2 = ocena1;
                 recept2 = recept1;
+                recept1 = tekuciRecepti[i];
                 ocena1 = ocena;                
-            } else if (recept2 == null || ocena > ocena2) {
-                recept2 = tekuciRecepti[i];
+            } else if (recept2 == null || ocena > ocena2) {                
                 ocena3 = ocena2;
                 recept3 = recept2;
+                recept2 = tekuciRecepti[i];
                 ocena2 = ocena;
             } else if (recept3 == null || ocena > ocena3) {
                 recept3 = tekuciRecepti[i];
