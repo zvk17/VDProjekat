@@ -8,9 +8,11 @@ function recipeItem(recipe) {
     if (recipe.reviews.length > 0) {
         review = Math.round((1.0 * review / recipe.reviews.length) * 10) / 10.0;
     }
-    let $div = $("<div>").addClass("col-12 col-lg-9 recipe-item");
+    let $div = $("<div>").addClass("col-12 col-lg-9 col-md-10 recipe-item");
     let $header = $("<h3>").text(recipe.name);
-    let $link = $("<a>").attr("href", "recept.html?idRecept=" + recipe.id);
+    let $link = $("<a>")
+        .addClass("row")
+        .attr("href", "recept.html?idRecept=" + recipe.id);
     let $hardness = $("<div>").text(messages.HARDNESS_LEVEL + recipe.level);
     let $review = $("<div>").text(messages.REVIEW + review);
     let $commentsNumber = $("<span></span>").text(commentsNumber).addClass("broj-komentara");
