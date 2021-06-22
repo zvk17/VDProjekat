@@ -4,7 +4,7 @@ function loadORInitRecipes() {
         recipes = [
             {
                 id: 1,
-                name: "Losos na zaru",
+                name: "Losos na žaru",
                 duration: "30min",
                 description: "opis kako napraviti lososa na žaru",
                 type: "G",

@@ -17,10 +17,11 @@ function recipeItem(recipe) {
     
     
     $link.append($header);
+    
+    $link.append($commentsNumber);
+    $link.append($hardness);
+    $link.append($review);
     $div.append($link);
-    $div.append($commentsNumber);
-    $div.append($hardness);
-    $div.append($review);
     return $div;
 }
 

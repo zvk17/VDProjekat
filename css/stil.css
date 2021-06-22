@@ -54,3 +54,21 @@
     left: 35%;
     
 }
+.recipe-item {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background: rgb(240, 240, 240);
+    padding: 0;
+    transition: 300ms all;
+    border: 1px solid rgb(220, 220, 220);
+}
+.recipe-item a, .recipe-item a:hover, .recipe-item a:visited {
+    padding: 20px 30px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+.recipe-item:hover {
+    background: rgb(235, 235, 235);
+    border: 1px solid rgb(210, 210, 210);
+}
