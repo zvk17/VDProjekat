@@ -26,7 +26,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarResponsive">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="index.html">Početna
                                         <!-- <span class="sr-only">(current)</span> -->
                                     </a>
@@ -46,13 +46,13 @@
                                     <a class="nav-link" href="">Dodaj recept</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">Moj nalog</a>
+                                    <a class="nav-link" href="html/sr/moj_nalog.html">Moj nalog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">O nama</a>
+                                    <a class="nav-link" href="html/sr/o_nama.html">O nama</a>
                                 </li>                                
                                 <li class="nav-item ml-lg-5 ml-md-0">
-                                    <a class="nav-link" href="html/sr/prijava.html">Odjavi se</a>
+                                    <a id="odjava" class="nav-link" href="html/sr/prijava.html">Odjavi se</a>
                                 </li>                
                             </ul>
                         </div>                        
@@ -61,7 +61,7 @@
             </div>
         </div>    
         <div class="row pl-5 pr-5 mt-5">
-            <div class="col-lg-9 col-md-12">
+            <div class="col-lg-9 col-md-12 mb-5">
                 <div id="carouselExampleIndicators" class="carousel slide w-100 najbolji-recepti" data-ride="carousel">
                     <!-- <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -69,22 +69,22 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                       </ol> -->
                     <div class="carousel-inner">
-                        <div class="carousel-item active">                          
-                            <div class="carousel-caption d-none d-md-block d-flex">
+                        <div class="carousel-item active">                                                      
+                            <img id="img-r1" class="w-100 d-block img-fluid recept-slika" alt="Second slide">
+                            <div class="carousel-caption">
                                 <h2 id="rh1"></h2>
                                 <p id="rp1"></p>
                             </div>    
-                            <img id="img-r1" class="w-100 d-block img-fluid recept-slika" alt="Second slide">
                         </div>
                       <div class="carousel-item">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption">
                             <h2 id="rh2"></h2>
                             <p id="rp2"></p>                  
                         </div>    
                         <img id="img-r2" class="w-100 d-block img-fluid recept-slika" src="" alt="First slide">                        
                       </div>                      
                       <div class="carousel-item">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption">
                             <h2 id="rh3"></h2>
                             <p id="rp3"></p>
                         </div>    

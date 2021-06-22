@@ -72,3 +72,26 @@
 #autori, #fakultet {
     font-size: 15px;    
 }
+
+#circle-inicijali {
+    width: 50%;    
+    border-radius: 50%;
+
+    text-align: center;
+    color: white;
+
+    margin-top: 5%;
+    margin-right: 23%;
+    margin-left: 23%;
+    position: absolute;
+
+}
+
+.o-nama {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.centrirano {
+    text-align: justify;
+}
