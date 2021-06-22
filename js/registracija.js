@@ -4,7 +4,8 @@ $(document).ready(function() {
             ime: "Petar",
             prezime: "Petrovic",
             korisnickoIme: "petar",
-            lozinka: "petar123"
+            lozinka: "petar123",
+            id: 1
         }
     ]
 
@@ -101,11 +102,14 @@ $(document).ready(function() {
                 $("#korisnickoImeGreska").text("Korisničko ime već postoji.");
                 $("#korisnickoImeGreska").show();
             } else {
+                let maxId = korisnici.reduce((akumulator, korisnik)=>Math.max(akumulator,korisnik.id), 0);
+                maxId++;
                 let noviKorisnik = {
                     ime: ime,
                     prezime: prezime,
                     korisnickoIme: korisnickoIme,
-                    lozinka: lozinka
+                    lozinka: lozinka,
+                    id: maxId
                 };
                 korisnici.push(noviKorisnik);
 
