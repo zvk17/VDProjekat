@@ -57,7 +57,7 @@ $(document).ready(()=>{
             description: description,
             type: type,
             level: parseInt(level),
-            userId: currentUser.id,
+            idUser: currentUser.id,
             comments: [],
             reviews: []
         });
