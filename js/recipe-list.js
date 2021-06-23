@@ -1,4 +1,4 @@
-let recipes = loadORInitRecipes();
+let recipes = loadOrInitRecipes();
 let searchString = "";
 
 if (!!RECIPE_TYPE) {

@@ -1,4 +1,4 @@
-function loadORInitRecipes() {
+function loadOrInitRecipes() {
     let recipes = localStorage.getItem("recipes");
     if (recipes == null) {
         recipes = [
