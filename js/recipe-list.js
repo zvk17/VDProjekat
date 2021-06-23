@@ -1,5 +1,10 @@
 let recipes = loadORInitRecipes();
-recipes = recipes.filter(recipe => recipe.type == RECIPE_TYPE);
+let searchString = "";
+
+if (!!RECIPE_TYPE) {
+    recipes = recipes.filter(recipe => recipe.type == RECIPE_TYPE);
+}
+
 
 function recipeItem(recipe) {
     let commentsNumber = recipe.comments.length;
@@ -9,7 +14,7 @@ function recipeItem(recipe) {
     $header.append($("<h3>").text(recipe.name));
     let $link = $("<a>")
         .addClass("row")
-        .attr("href", "recept.html?idRecept=" + recipe.id);
+        .attr("href", messages.RECIPE_PAGE + "?id=" + recipe.id);
     let $hardness = $("<div>")
         .addClass("col-12")
         .text(messages.HARDNESS_LEVEL + recipe.level);
@@ -50,6 +55,13 @@ function sortByReview(recipes) {
 }
 let sortRecipes = sortDefault;
 
+function filterRecipesSearch(recipes, needle) {
+    needle = needle.toLowerCase();
+    return recipes.filter(recipe => {
+        return recipe.name.toLowerCase().indexOf(needle) > -1;
+    });
+}
+
 function insertRecipes(recipes) {
     let $list = $("#recipe-list");
     let $recipes = recipes.map(recipeItem);
@@ -60,10 +72,25 @@ function insertRecipes(recipes) {
 }
 function showRecipes() {
     let r = sortRecipes(recipes.slice());
+    if (searchString.length > 0) {
+        r = filterRecipesSearch(recipes, searchString);
+        if (r.length == 0) {
+            let $list = $("#recipe-list");
+            $list.empty();
+            $list.append(
+                $("<h3>")
+                    .addClass("col-12 mt-5 text-center")
+                    .text(messages.RECIPE_NOT_FOUND)
+            );
+            return;
+        }
+    }
     insertRecipes(r);
 }
 $(document).ready(()=>{
-    let $recipeSort = $("#recipe-sort");    
+    let $recipeSort = $("#recipe-sort"); 
+    let $recipeSearch = $("#recipe-search");   
+    let $searchButton = $("#search-button");
     $recipeSort.on("change",()=>{
         let sortValue = $recipeSort.val();
         console.log(sortValue);
@@ -83,5 +110,10 @@ $(document).ready(()=>{
         }
         showRecipes();
     });
+    $searchButton.on("click", ()=>{
+        searchString = $recipeSearch.val();
+        showRecipes();
+    });  
+
     showRecipes();
 });

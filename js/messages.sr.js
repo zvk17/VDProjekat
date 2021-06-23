@@ -5,5 +5,7 @@ window.messages = {
     DESCRIPTION_REQUIRED: "Potrebno je uneti uputstvo za recept",
     DURATION_REQUIRED: "Obavezno je uneti duzinu spremanja jela",
     NOT_LOGGED_IN: "Morate biti prijavljeni da biste dodali recept",
-    AUTHOR: "Autor: "   
+    AUTHOR: "Autor: ",
+    RECIPE_NOT_FOUND: "Nije pronađen nijedan recept sa datim imenom",
+    RECIPE_PAGE: "recept.html"
 };

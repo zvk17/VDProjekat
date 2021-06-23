@@ -16,11 +16,9 @@ $(document).ready(()=>{
         let description = $dishDescription.val();
         let duration = $dishDuration.val();
         let errorMessage = "";
-
-        // TODO korisnik mora biti ulogovan
-        console.error("Korisnik mora biti ulogovan");
+       
         let currentUser = localStorage.getItem("tekuciKorisnik");
-
+        
         if (currentUser == null) {
             errorMessage += messages.NOT_LOGGED_IN + "<br />";
         } else {
