@@ -10,9 +10,10 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="css/stil.css">
-    <script src="js/pocetna.js"></script>
-    <script src="js/navigacija.js"></script>
     <script src="js/Recipe.js"></script>
+    <script src="js/messages.sr.js"></script>
+    <script src="js/pocetna.js"></script>
+    <script src="js/navigacija.js"></script>    
     <title>Početna</title>
 </head>
 <body>
@@ -46,14 +47,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="">Dodaj recept</a>
                                 </li>
-                                <li class="nav-item">
+                                <li id="moj-nalog" class="nav-item">
                                     <a class="nav-link" href="html/sr/moj_nalog.html">Moj nalog</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="html/sr/o_nama.html">O nama</a>
                                 </li>                                
                                 <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
-                                    <a id="odjava" class="nav-link" href="html/sr/prijava.html">Odjavi se</a>
+                                    <a id="odjava" class="nav-link" href="html/sr/prijava.html"></a>
                                 </li>                
                             </ul>
                         </div>                        
@@ -77,27 +78,27 @@
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                               </ol> -->
                             <div class="carousel-inner">
-                                <div class="carousel-item active">                                                      
-                                    <img id="img-r1" class="w-100 d-block img-fluid recept-slika" alt="Second slide">
+                                <div id="prvi-slajd" class="carousel-item active">                                                      
+                                    <a id="l1" href=""><img id="img-r1" class="w-100 d-block img-fluid recept-slika" alt="Second slide"></a>
                                     <div class="carousel-caption">
                                         <h2 id="rh1"></h2>
                                         <p id="rp1"></p>
                                     </div>    
                                 </div>
-                              <div class="carousel-item">
+                              <div id="drugi-slajd" class="carousel-item">
                                 <div class="carousel-caption">
                                     <h2 id="rh2"></h2>
                                     <p id="rp2"></p>                  
                                 </div>    
-                                <img id="img-r2" class="w-100 d-block img-fluid recept-slika" src="" alt="First slide">                        
-                              </div>                      
-                              <div class="carousel-item">
+                                <a id="l2" href=""><img id="img-r2" class="w-100 d-block img-fluid recept-slika" src="" alt="First slide"></a>
+                              </div>                                                    
+                              <div id="treci-slajd" class="carousel-item">
                                 <div class="carousel-caption">
                                     <h2 id="rh3"></h2>
                                     <p id="rp3"></p>
                                 </div>    
-                                <img id="img-r3" class="w-100 d-block img-fluid recept-slika" src="" alt="Third slide">
-                              </div>
+                                <a id="l3" href=""><img id="img-r3" class="w-100 d-block img-fluid recept-slika" src="" alt="Third slide"></a>
+                              </div>                            
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -209,7 +210,7 @@
             <div class="col-lg-2 col-md-12 reklame bg-light">
                 <a target="_blank" href="https://planetasport.rs/"><img src="slike/baneri/bgnocu.png" class="img-fluid baner"></a>                     
                 <img src="slike/baneri/planeta.jpg" class="img-fluid baner">
-                <img src="slike/baneri/imlek.jpg.crdownload" class="img-fluid baner">
+                <img src="slike/baneri/imlek.jpg" class="img-fluid baner">
             </div>
         </div>        
         <!-- ///////////         -->

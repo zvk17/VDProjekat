@@ -1,5 +1,5 @@
 $(document).ready(function() {            
-    let tekuciRecepti = loadORInitRecipes();
+    let tekuciRecepti = loadOrInitRecipes();
 
     popuniStranicu();
 
@@ -53,6 +53,10 @@ $(document).ready(function() {
         $("#img-r1").attr("src", "slike/" + tip1 + "/" + recept1.name + ".jpg");                
         $("#img-r2").attr("src", "slike/" + tip2 + "/" + recept2.name + ".jpg");
         $("#img-r3").attr("src", "slike/" + tip3 + "/" + recept3.name + ".jpg");
+
+        $("#l1").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept1.id);
+        $("#l2").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept2.id);
+        $("#l3").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept3.id);
     }
 
     function dohvatiTip(tip) {

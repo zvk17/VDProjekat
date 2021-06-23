@@ -29,16 +29,16 @@ $(document).ready(function() {
         let prezimeGreska = null;
         
         if (korisnickoIme.length == 0) {
-            korisnickoGreska = "Korisničko ime je obavezno polje."
+            korisnickoGreska = messages.LOGIN_USERNAME_REQUIRED;
         }
         if (lozinka.length == 0) {
-            lozinkaGreska = "Lozinka je obavezno polje."
+            lozinkaGreska = messages.LOGIN_PASSWORD_REQUIRED;
         }
         if (ime.length == 0) {
-            imeGreska = "Ime je obavezno polje."
+            imeGreska = messages.REGISTER_FIRSTNAME_REQUIRED;
         }
         if (prezime.length == 0) {
-            prezimeGreska = "Prezime je obavezno polje."
+            prezimeGreska = messages.REGISTER_LASTNAME_REQUIRED;
         }
 
         if (korisnickoGreska != null || lozinkaGreska != null || imeGreska != null || prezimeGreska != null) {
@@ -62,16 +62,16 @@ $(document).ready(function() {
         }
 
         if (/^[a-zA-Z]*$/.test(ime) == false) {
-            $("#imeGreska").text("Ime se sastoji samo od slova.");
+            $("#imeGreska").text(messages.REGISTER_FIRSTNAME_ALPHA);
             $("#imeGreska").show();
         } else if (/^[a-zA-Z]*$/.test(prezime) == false) {
-            $("#prezimeGreska").text("Prezime se sastoji samo od slova.");
+            $("#prezimeGreska").text(messages.REGISTER_LASTNAME_ALPHA);
             $("#prezimeGreska").show();
         } else if (/^[a-zA-Z]*$/.test(korisnickoIme) == false) {
-            $("#korisnickoImeGreska").text("Korisničko ime se sastoji samo od slova.");
+            $("#korisnickoImeGreska").text(messages.REGISTER_USERNAME_ALPHA);
             $("#korisnickoImeGreska").show();
         } else if (/.{8,}/.test(lozinka) == false) {
-            $("#lozinkaGreska").text("Lozinka mora da ima bar 8 karaktera.");
+            $("#lozinkaGreska").text(messages.REGISTER_PASSWORD_MIN_LENGTH);
             $("#lozinkaGreska").show();
         } else {
             let pronadjenKorisnik = null;
@@ -82,7 +82,7 @@ $(document).ready(function() {
                 }
             }        
             if (pronadjenKorisnik != null) {
-                $("#korisnickoImeGreska").text("Korisničko ime već postoji.");
+                $("#korisnickoImeGreska").text(messages.REGISTER_USERNAME_UNIQUE);
                 $("#korisnickoImeGreska").show();
             } else {
                 let novId = korisnici[korisnici.length - 1].id + 1;

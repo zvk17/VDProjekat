@@ -22,10 +22,10 @@ $(document).ready(function() {
         let lozinkaGreska = null;
         
         if (korisnickoIme.length == 0) {
-            imeGreska = "Korisničko ime je obavezno polje."
+            imeGreska = messages.LOGIN_USERNAME_REQUIRED;
         }
         if (lozinka.length == 0) {
-            lozinkaGreska = "Lozinka je obavezno polje."
+            lozinkaGreska = messages.LOGIN_PASSWORD_REQUIRED;
         }
 
         if (imeGreska != null || lozinkaGreska != null) {
@@ -49,13 +49,13 @@ $(document).ready(function() {
         }        
 
         if (pronadjenKorisnik == null) {
-            $("#korisnickoImeGreska").text("Korisničko ime ne postoji.");
+            $("#korisnickoImeGreska").text(messages.LOGIN_USERNAME_NOT_EXISTS);
             $("#korisnickoImeGreska").show();
             return;
         }
 
         if (pronadjenKorisnik.lozinka != lozinka) {
-            $("#lozinkaGreska").text("Lozinka nije ispravna.");
+            $("#lozinkaGreska").text(messages.LOGIN_PASSWORD_ERROR);
             $("#lozinkaGreska").show();
             return;
         }
