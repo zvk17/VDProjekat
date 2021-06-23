@@ -29,6 +29,7 @@ $(document).ready(function(){
         inicijali = inicijali.toUpperCase();        
         $("#circle-inicijali").text(inicijali);
         $("#desno-ime-prezime").text(ime + " " + prezime);
+        $("#korisnicko-ime").text("@" + tekuciKorisnik.korisnickoIme);
     }
 
     function dopuniColorNumber(colorNumber)

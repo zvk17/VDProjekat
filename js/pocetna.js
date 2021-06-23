@@ -42,6 +42,7 @@ $(document).ready(function() {
         $("#rh2").text(recept2.name);
         $("#rh3").text(recept3.name);
 
+        // izmena
         $("#rp1").text("Ocena: " + ocena1.toFixed(1));
         $("#rp2").text("Ocena: " + ocena2.toFixed(1));
         $("#rp3").text("Ocena: " + ocena3.toFixed(1));
@@ -54,6 +55,7 @@ $(document).ready(function() {
         $("#img-r2").attr("src", "slike/" + tip2 + "/" + recept2.name + ".jpg");
         $("#img-r3").attr("src", "slike/" + tip3 + "/" + recept3.name + ".jpg");
 
+        // izmena
         $("#l1").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept1.id);
         $("#l2").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept2.id);
         $("#l3").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept3.id);
