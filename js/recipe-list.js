@@ -1,4 +1,5 @@
 let recipes = loadOrInitRecipes();
+let users = ucitajKorisnike();
 let searchString = "";
 
 if (!!RECIPE_TYPE) {
@@ -8,6 +9,10 @@ if (!!RECIPE_TYPE) {
 
 function recipeItem(recipe) {
     let commentsNumber = recipe.comments.length;
+    let user = users.find(user => user.id == recipe.idUser);
+    
+    let userName = user.ime + " " + user.prezime;
+
     let review = getReviewValue(recipe);
     let $div = $("<div>").addClass("col-12 recipe-item");
     let $header = $("<div>").addClass("col-11");
@@ -28,7 +33,8 @@ function recipeItem(recipe) {
     let $commentsDiv = $("<div>")
         .addClass("col-1 text-right")
         .append($commentsNumber);
-    let $authorDiv = $("<div>").addClass("col-12").text(messages.AUTHOR + "HARDKODOVANO");
+    
+    let $authorDiv = $("<div>").addClass("col-12").text(messages.AUTHOR + userName);
     
     $link.append($header);
     
