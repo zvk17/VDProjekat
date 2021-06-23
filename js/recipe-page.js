@@ -1,4 +1,5 @@
 let recipes = loadOrInitRecipes();
+let users = ucitajKorisnike();
 let recipeId = getRecipeId();
 let currentRecipe = recipes.find(recipe=>recipe.id== recipeId);
 
@@ -12,7 +13,9 @@ function getRecipeId() {
     return -1;
 }
 function commentItem(comment) {
-    
+    let user = users.find(user => user.id == comment.idUser);
+    let userName = user.ime + " "  + user.prezime;
+    return $("<div></div>").addClass("col-12").text(userName);
 }
 function insertRecipes(comments) {
     let $list = $("#recipe-comments");
@@ -22,15 +25,34 @@ function insertRecipes(comments) {
         $list.append($comment);
     });
 }
+function showComments() {
+    let $commentList = $("#recipe-comments");
+    $commentList.empty();
+
+    let $comments = currentRecipe.comments.map(commentItem);
+    $comments.forEach($comment => {
+        $commentList.append($comment);
+    });
+}
 $(document).ready(()=>{
     if (!currentRecipe) {
         let $recipeView = $("#recipe-view");
         $recipeView.empty();
-        $recipeView.append($("<h3>").text(messages.RECIPE_NOT_EXIST));
+        $recipeView
+            .addClass("text-center")
+            .append($("<h2>").text(messages.RECIPE_NOT_EXIST));
         return;
     }
-    let $recipeName = $("#recipe-name");
+    let author = users.find(user => user.id == currentRecipe.idUser);
+    let $recipeName = $(".recipe-name");
     let $recipeDescription = $("#recipe-description");
+    let $recipeDuration = $("#recipe-duration");
+    let $recipeAuthor = $("#recipe-author");
+    
     $recipeName.text(currentRecipe.name);
     $recipeDescription.text(currentRecipe.description);
+    $recipeDuration.text(currentRecipe.duration);
+    $recipeAuthor.text(author.ime + " " + author.prezime);
+
+    showComments();
 });

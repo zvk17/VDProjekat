@@ -10,7 +10,15 @@ function loadOrInitRecipes() {
                 type: "G",
                 level: 4,
                 idUser: 4,
-                comments: [],
+                comments: [
+                    {
+                        idUser: 3,
+                        text: "Odličan recept"
+                    }, {
+                        idUser: 2,
+                        text: "Baš dobar recept"
+                    }
+                ],
                 reviews: [
                     {
                         idUser: 2,

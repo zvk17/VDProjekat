@@ -18,26 +18,50 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div id="recipe-view">
-            <div class="row">
-                <div class="col-12">
-                    <h1 id="recipe-name"></h1>
+        <div class="row d-flex justify-content-center">            
+            <div class="col-lg-8 col-12">                
+                <div id="recipe-view">
+                    <!--
+                        TODO breadcrumb
+                    <div class="row">
+                        <div class="col-12">
+                            Recepti > <a href="#" id="recipe-type-breadcrumb" >Tip jela</a> > <span class="recipe-name"></span>
+                        </div>
+                    </div>
+                    -->
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="recipe-name" class="text-center"></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 recipe-info-data">                
+                            <p>Autor:
+                                <span id="recipe-author"></span>
+                            </p>
+                            <p>Vreme pripreme: 
+                                <span id="recipe-duration"></span>
+                            </p>                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Uputstvo za pripremu</h3>                
+                            <p class="text-justify" id="recipe-description"></p>
+                        </div>
+                    </div>                    
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Komentari</h3>
+                        </div>
+                    </div>
+                    <div class="row" id="recipe-comments">
+                        
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">                
-                    <h3 id="recipe-time"></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">                
-                    <p class="text-justify" id="recipe-description"></p>
-                </div>
-            </div>
-            <div class="row" id="recipe-comments">
+        </div>
                 
-            </div>
-        </div>        
     </div>
 </body>
 </html>
