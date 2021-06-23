@@ -1,25 +1,8 @@
 $(document).ready(function() {
-    let korisnici = [
-        {
-            ime: "Petar",
-            prezime: "Petrovic",
-            korisnickoIme: "petar",
-            lozinka: "petar123",
-            id: 1
-        }
-    ]
+    let korisnici = ucitajKorisnike();
 
-    resetujGreske();
-    inicijalizujPodatke();
-    dodajDogadjaje();    
-
-    function inicijalizujPodatke() {
-        if (localStorage.getItem("korisnici") == null) {
-            localStorage.setItem("korisnici", JSON.stringify(korisnici));
-        } else {
-            korisnici = JSON.parse(localStorage.getItem("korisnici"));
-        }
-    }
+    resetujGreske();    
+    dodajDogadjaje();        
 
     function dodajDogadjaje() {
         $("#registracija").click(registrujSe);        
@@ -102,14 +85,13 @@ $(document).ready(function() {
                 $("#korisnickoImeGreska").text("Korisničko ime već postoji.");
                 $("#korisnickoImeGreska").show();
             } else {
-                let maxId = korisnici.reduce((akumulator, korisnik)=>Math.max(akumulator,korisnik.id), 0);
-                maxId++;
+                let novId = korisnici[korisnici.length - 1].id + 1;
                 let noviKorisnik = {
+                    id: novId,
                     ime: ime,
                     prezime: prezime,
                     korisnickoIme: korisnickoIme,
-                    lozinka: lozinka,
-                    id: maxId
+                    lozinka: lozinka
                 };
                 korisnici.push(noviKorisnik);
 
