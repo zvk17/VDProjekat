@@ -7,5 +7,6 @@ window.messages = {
     NOT_LOGGED_IN: "Morate biti prijavljeni da biste dodali recept",
     AUTHOR: "Autor: ",
     RECIPE_NOT_FOUND: "Nije pronađen nijedan recept sa datim imenom",
-    RECIPE_PAGE: "recept.html"
+    RECIPE_PAGE: "recept.html",
+    RECIPE_NOT_EXIST: "Dati recept ne postoji"
 };

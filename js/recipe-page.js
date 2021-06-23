@@ -1,4 +1,4 @@
-let recipes = loadORInitRecipes();
+let recipes = loadOrInitRecipes();
 let recipeId = getRecipeId();
 let currentRecipe = recipes.find(recipe=>recipe.id== recipeId);
 
@@ -23,5 +23,14 @@ function insertRecipes(comments) {
     });
 }
 $(document).ready(()=>{
-    $("h1").text(getRecipeId());
-})
+    if (!currentRecipe) {
+        let $recipeView = $("#recipe-view");
+        $recipeView.empty();
+        $recipeView.append($("<h3>").text(messages.RECIPE_NOT_EXIST));
+        return;
+    }
+    let $recipeName = $("#recipe-name");
+    let $recipeDescription = $("#recipe-description");
+    $recipeName.text(currentRecipe.name);
+    $recipeDescription.text(currentRecipe.description);
+});
