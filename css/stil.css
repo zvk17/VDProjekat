@@ -26,7 +26,7 @@
 .recept-slika {
     object-fit: cover;
     width: 100%;
-    height: 400px;
+    height: 430px;
     filter: brightness(55%);
 }
 
@@ -143,4 +143,14 @@
 
 .centrirano {
     text-align: justify;
+}
+
+.baner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100px;
+}
+
+.reklame {
+    background-color: white;
 }
