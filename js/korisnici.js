@@ -2,12 +2,12 @@ function ucitajKorisnike() {
     let korisnici = localStorage.getItem("korisnici");
     if (korisnici == null) {
         korisnici = [
-            {               
-                id: 1, 
+            {                               
                 ime: "Petar",
                 prezime: "Petrovic",
                 korisnickoIme: "petar",
-                lozinka: "petar123"
+                lozinka: "petar123",
+                id: novId,
             }
         ];
         localStorage.setItem("korisnici", JSON.stringify(korisnici));

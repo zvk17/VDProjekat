@@ -86,12 +86,12 @@ $(document).ready(function() {
                 $("#korisnickoImeGreska").show();
             } else {
                 let novId = korisnici[korisnici.length - 1].id + 1;
-                let noviKorisnik = {
-                    id: novId,
+                let noviKorisnik = {                    
                     ime: ime,
                     prezime: prezime,
                     korisnickoIme: korisnickoIme,
-                    lozinka: lozinka
+                    lozinka: lozinka,
+                    id: novId
                 };
                 korisnici.push(noviKorisnik);
 
