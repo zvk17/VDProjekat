@@ -1,13 +1,5 @@
 $(document).ready(function() {
-    let korisnici = [
-        {
-            ime: "Petar",
-            prezime: "Petrovic",
-            korisnickoIme: "petar",
-            lozinka: "petar123",
-            id: 1
-        }
-    ]
+    let korisnici = ucitajKorisnike();
 
     resetujGreske();
     inicijalizujPodatke();
