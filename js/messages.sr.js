@@ -8,6 +8,8 @@ window.messages = {
     AUTHOR: "Autor: ",
     RECIPE_NOT_FOUND: "Nije pronađen nijedan recept sa datim imenom",
     RECIPE_PAGE: "recept.html",
+    RECIPE_NOT_EXIST: "Dati recept ne postoji",
+
 
     LOGIN: "Prijavi se",
     LOGOUT: "Odjavi se",
@@ -21,5 +23,5 @@ window.messages = {
     REGISTER_FIRSTNAME_ALPHA: "Ime se sastoji samo od slova.",
     REGISTER_PASSWORD_MIN_LENGTH: "Lozinka mora da ima bar 8 karaktera.",
     REGISTER_LASTNAME_ALPHA: "Prezime se sastoji samo od slova.",
-    REGISTER_USERNAME_ALPHA: "Korisničko ime se sastoji samo od slova."
+    REGISTER_USERNAME_ALPHA: "Korisničko ime se sastoji samo od slova."    
 };
