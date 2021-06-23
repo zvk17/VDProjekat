@@ -1,9 +1,4 @@
-let messages = {
-    MIN_NAME_LENGTH: "Minimalna dužina naslova je 5 znaka.",
-    DESCRIPTION_REQUIRED: "Potrebno je uneti uputstvo za recept",
-    DURATION_REQUIRED: "Obavezno je uneti duzinu spremanja jela",
-    NOT_LOGGED_IN: "Morate biti prijavljeni da biste dodali recept"
-}
+
 $(document).ready(()=>{
 
     let $dishName = $("#dish-name");
@@ -21,11 +16,9 @@ $(document).ready(()=>{
         let description = $dishDescription.val();
         let duration = $dishDuration.val();
         let errorMessage = "";
-
-        // TODO korisnik mora biti ulogovan
-        console.error("Korisnik mora biti ulogovan");
+       
         let currentUser = localStorage.getItem("tekuciKorisnik");
-
+        
         if (currentUser == null) {
             errorMessage += messages.NOT_LOGGED_IN + "<br />";
         } else {
@@ -65,7 +58,8 @@ $(document).ready(()=>{
             type: type,
             level: parseInt(level),
             userId: currentUser.id,
-            comments: []
+            comments: [],
+            reviews: []
         });
         localStorage.setItem("recipes", JSON.stringify(recipes));
     });
