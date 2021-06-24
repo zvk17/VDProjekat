@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glavna jela</title>
+    <title>Užine</title>
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/stil.css" />
     <script src="../../js/jquery-3.6.0.js"></script>
@@ -13,17 +13,51 @@
     </script>
     <script src="../../js/messages.sr.js"></script>
     <script src="../../js/Recipe.js"></script>
+    <script src="../../js/korisnici.js"></script>
     <script src="../../js/recipe-list.js"></script>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1>Užina</h1>
+        <div class="row d-flex justify-content-center">
+            <div class="col-11 col-lg-10 col-md-10">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Užine</h1>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-between">
+                    <div class="col-md-4 col-12 mb-md-0 mb-3 pl-0 pr-0 text-left">
+                        <div class="row">
+                            <div class="col-8 mr-0 pr-1">
+                                <input type="text" 
+                                    placeholder="Naziv recepta"
+                                    class="form-control"
+                                   id="recipe-search"
+                                />
+                            </div>
+                            <div class="col-4 pl-0">
+                                <button 
+                                    class="d-block w-100 btn btn-dark"
+                                    id="search-button">Pretraži</button>
+                            </div>
+                        </div>
+                                                
+                    </div>
+                    <div class="col-md-4 col-12 pr-0 pl-0">
+                        <div class="row d-flex justify-content-between">
+                            <label for="recipe-sort" class="col-3 col-form-label">Sortiraj:</label>
+                            <div class="col-8">
+                                <select id="recipe-sort" class="form-control">
+                                    <option value="N"></option>
+                                    <option value="L">Po težini</option>
+                                    <option value="R">Po oceni</option>
+                                </select>
+                            </div>                            
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row" id="recipe-list"></div>
             </div>
-        </div>
-        <div class="row d-flex justify-content-center" id="recipe-list">
-
         </div>
     </div>
 </body>

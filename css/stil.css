@@ -68,7 +68,7 @@
 .recipe-item:first-child {
     margin-top: 28px;
 }
-.recipe-item:last-child {
+.recipe-item:last-child, .comment-item:last-child {
     margin-bottom: 28px;
 }
 .recipe-item a, .recipe-item a:hover, .recipe-item a:visited {

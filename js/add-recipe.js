@@ -45,7 +45,7 @@ $(document).ready(()=>{
         $dishError.empty();
 
 
-        let recipes = loadORInitRecipes();
+        let recipes = loadOrInitRecipes();
         let maxId = recipes.reduce(
             (max,recipe) => Math.max(max,recipe.id), 0
         );
@@ -62,6 +62,7 @@ $(document).ready(()=>{
             reviews: []
         });
         localStorage.setItem("recipes", JSON.stringify(recipes));
+        location.href = messages.RECIPE_PAGE + "?id=" + maxId;
     });
 
     
