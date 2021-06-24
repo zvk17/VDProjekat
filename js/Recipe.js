@@ -6,11 +6,19 @@ function loadOrInitRecipes() {
                 id: 1,
                 name: "Losos na žaru",                
                 duration: "30min",
-                description: "Postoji više različitih vrsta lososa a čak i u zavisnosti od njihovog životnog ciklusa, meso im može biti crveno, ružičasto ili narandžasto, čak sa više ili manje masnoće, različitih ukusa. Kalorijski gledano, spada u najzasitnije ribe upravo iz razloga bogatstva njihovog mesa masnoćama. Kako bi razjasnili ovu činjenicu, napominjemo da masnoće o kojima pričamo ne spadaju u grupu nepoželjnih već potpuno suprotno, bogatstvo esecijalnim omega 3 masnim kiselinama je ono što ovu ribu čini odličnim izborom. Energetska vrednost ove ribe je približno 120 kalorija na 100 g fileta. Najbitnije je odabrati svežu i zdravu ribu. Kao i sva morska hrana, vrlo je osetljiva na nestručno skladištenje i dopremanje, pa vam savetujemo da se snabdevate isključivo kod proverenih dobavljača sa svim potrebnim sertifikatima u ovoj oblasti. Kako biste sačuvali potreban ukus i arome samog mesa, losos nemojte začinjavati jakim i intenzivnim začinima već samo limunom i maslinovim uljem. Bogatstvo masnoćom ga čini idealnim za pripremu na roštilju. Mnogi porede lososa sa biftekom vodenog sveta jer se i za njegovu pripremu mora biti stručan i pažljiv. Nikakav efekat nećemo postići ako željeni komad ostavimo suviše dugo na vatri jer onda dobijamo presušen komad koji je skoro pa neupotrebljiv. Nasuprot tome, ni suviše kratka termička obrada ne dopušta masnoćama da puste svoju potpunu aromu te ostajemo uskraćeni za bogatstvo ukusa koje ova riba nudi. Losos mora imati zapečenu koricu a sredina mora ostati blago ružičasta, sočna i blago kremasta. Uz meso lososa najbolje se slaže suvo belo vino, koje će svojim bukeom nadograditi i dopuniti svaki zalogaj.",
+                description: "Postoji više različitih vrsta lososa a čak i u zavisnosti od njihovog životnog ciklusa, meso im može biti crveno, ružičasto ili narandžasto, čak sa više ili manje masnoće, različitih ukusa. Kalorijski gledano, spada u najzasitnije ribe upravo iz razloga bogatstva njihovog mesa masnoćama. Kako bi razjasnili ovu činjenicu, napominjemo da masnoće o kojima pričamo ne spadaju u grupu nepoželjnih već potpuno suprotno, bogatstvo esecijalnim omega 3 masnim kiselinama je ono što ovu ribu čini odličnim izborom. Energetska vrednost ove ribe je približno 120 kalorija na 100g fileta. Najbitnije je odabrati svežu i zdravu ribu. Kao i sva morska hrana, vrlo je osetljiva na nestručno skladištenje i dopremanje, pa vam savetujemo da se snabdevate isključivo kod proverenih dobavljača sa svim potrebnim sertifikatima u ovoj oblasti. Kako biste sačuvali potreban ukus i arome samog mesa, losos nemojte začinjavati jakim i intenzivnim začinima već samo limunom i maslinovim uljem. Bogatstvo masnoćom ga čini idealnim za pripremu na roštilju. Mnogi porede lososa sa biftekom vodenog sveta jer se i za njegovu pripremu mora biti stručan i pažljiv. Nikakav efekat nećemo postići ako željeni komad ostavimo suviše dugo na vatri jer onda dobijamo presušen komad koji je skoro pa neupotrebljiv. Nasuprot tome, ni suviše kratka termička obrada ne dopušta masnoćama da puste svoju potpunu aromu te ostajemo uskraćeni za bogatstvo ukusa koje ova riba nudi. Losos mora imati zapečenu koricu a sredina mora ostati blago ružičasta, sočna i blago kremasta. Uz meso lososa najbolje se slaže suvo belo vino, koje će svojim bukeom nadograditi i dopuniti svaki zalogaj.",
                 type: "G",
                 level: 4,
                 idUser: 4,
-                comments: [],
+                comments: [
+                    {
+                        idUser: 3,
+                        text: "Odličan recept"
+                    }, {
+                        idUser: 2,
+                        text: "Baš dobar recept"
+                    }
+                ],
                 reviews: [
                     {
                         idUser: 2,
@@ -67,9 +75,9 @@ function loadOrInitRecipes() {
                 id: 5,
                 name: "Tiramisu",                
                 duration: "40min",
-                description: "Žumanjce izmiksati sa šećerom u prahu i staviti da se kuha na pari dok se ne zgusne….oko 15-20 minuta dok se ne zgusne.Kad se dobro ohladi dodati mascarpone sir i malo umutiti.Posebno umutiti slatko vrhnje te i to dodati predhodnoj smjesi i ponovo umutiti mikserom. " +
-                             "Piškote umakati u procjeđenu crnu kafu kojoj se doda malo ruma i slagati na tacnu(pola piškota ide,dva reda po 12 komada)te na to stavimo kremu, pa opet natopljene piškote(dva reda po 12 komada) pa ostatak kreme.Sve to pospemo kakao prahom radi dekoracije. " +
-                             "Ako pravite duplu mjeru nemojte fil zajedno mutiti za obe mjere, mutite odvojeno jer iz iskustva znam da neće krema biti čvrsta kako treba da bude.Jednom sam pravila duplu mjeru i krema mi je bila meksa.Valjda je veća količina pa se nemože dobro umutiti. Prijatno!",
+                description: "Žumance izmiksati sa šećerom u prahu i staviti da se kuva na pari dok se ne zgusne….oko 15-20 minuta dok se ne zgusne.Kad se dobro ohladi dodati maskarpone sir i malo umutiti. Posebno umutiti slatko vrhnje te i to dodati predhodnoj smeeši i ponovo umutiti mikserom. " +
+                             "Piškote umakati u proceđenu crnu kafu kojoj se doda malo ruma i slagati na tacnu(pola piškota ide,dva reda po 12 komada)te na to stavimo kremu, pa opet natopljene piškote(dva reda po 12 komada) pa ostatak kreme.Sve to pospemo kakao prahom radi dekoracije. " +
+                             "Ako pravite duplu meru nemojte fil zajedno mutiti za obe mere, mutite odvojeno jer iz iskustva znam da neće krema biti čvrsta kako treba da bude. Jednom sam pravila duplu meru i krema mi je bila mekša. Valjda je veća količina pa se nemože dobro umutiti. Prijatno!",
                 type: "D",
                 level: 3,
                 idUser: 1,
@@ -81,6 +89,7 @@ function loadOrInitRecipes() {
                 ],
                 reviews: [
                     {
+
                         idUser: 2,
                         mark: 4
                     }
