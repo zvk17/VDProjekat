@@ -9,7 +9,7 @@
     text-align: center;
     background-color: #343a40;
     color: lightgray;
-    font-size: 14px;
+    font-size: 14px; 
 }
 
 .footer hr {
@@ -147,7 +147,7 @@
     margin-top: 5%;
     margin-right: 23%;
     margin-left: 23%;
-    position: absolute;
+    /* position: absolute; */
 
 }
 
@@ -169,6 +169,7 @@
 .reklame {
     background-color: white;
 }
+
 .recipe-info-data {
     font-size: 1.1rem;
 }
@@ -186,4 +187,29 @@ h1 {
     #recipe-comments, #cannot-comment-and-review, #comment-and-review, .comment-section {
         display: none;
     }
+}
+
+.nalog-slika {
+    object-fit: cover;
+    width: 100%;
+    /* width: 400px;   */
+    height: 200px; 
+    border-radius: 5px;
+}
+
+.checked {
+    color: black;
+}
+
+.recept-link:link {
+    color: black;
+}
+
+.recept-link:visited {
+    color: black;
+}
+
+.recept-link:hover {
+    color: gray;
+    text-decoration: none;
 }

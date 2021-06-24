@@ -47,6 +47,7 @@ $(document).ready(function(){
         let inicijali = dohvatiInicijale(ime, prezime);        
         $("#circle-inicijali").text(inicijali);
         $("#desno-ime-prezime").text(ime + " " + prezime);
+        $("#korisnicko-ime").text("@" + tekuciKorisnik.korisnickoIme);
     }
 
 });
