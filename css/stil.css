@@ -164,7 +164,7 @@
 }
 
 .checked {
-    color: black;
+    color: white;
 }
 
 .recept-link:link {
@@ -178,4 +178,8 @@
 .recept-link:hover {
     color: gray;
     text-decoration: none;
+}
+
+.ukloni-recept {
+    font-size: 10px;
 }
