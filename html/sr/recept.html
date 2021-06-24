@@ -12,6 +12,7 @@
         const RECIPE_TYPE = "U";
     </script>
     <script src="../../js/messages.sr.js"></script>
+    <script src="../../js/generisanje_slike.js"></script>
     <script src="../../js/Recipe.js"></script>
     <script src="../../js/korisnici.js"></script>
     <script src="../../js/recipe-page.js"></script>
@@ -19,7 +20,7 @@
 <body>
     <div class="container-fluid">
         <div class="row d-flex justify-content-center">            
-            <div class="col-lg-8 col-12">                
+            <div class="col-lg-9 col-md-10 col-12">                
                 <div id="recipe-view">
                     <!--
                         TODO breadcrumb
@@ -49,13 +50,51 @@
                             <h3>Uputstvo za pripremu</h3>                
                             <p class="text-justify" id="recipe-description"></p>
                         </div>
-                    </div>                    
+                    </div>  
+                    <div class="row comment-section">
+                        <div class="col-12">
+                            <h3>Ostavite komentar i ocenu</h3>
+                        </div>
+                    </div>
+                    <div id="comment-and-review" class="d-none">
+                        <div class="row">
+                            <div class="col-12"><h4>Komentar</h4></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea 
+                                    id="comment-text-area"
+                                    class="form-control"
+                                    placeholder="Komentar"                                class="form-control"
+                                ></textarea>
+                            </div>
+                            <div class="col-12 col-md-5 col-lg-3">
+                                <button
+                                    id="comment-add-button"
+                                    class="btn btn-dark w-100 mt-3 p-2">
+                                    Ostavi komentar
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    <div id="cannot-comment-and-review" class="row d-none">
+                        <div class="col-12 recipe-info-data">
+                            <p>Da biste ostavili komentar i ocenu morate biti prijavljeni</p>
+                        </div>
+                    </div>
                     <div class="row">
+                        <div class="col-12 recipe-info-data">                
+                            <p id="recipe-average-review">
+
+                            </p>                                                        
+                        </div>
+                    </div>                  
+                    <div class="row comment-section">
                         <div class="col-12">
                             <h3>Komentari</h3>
                         </div>
                     </div>
-                    <div class="row" id="recipe-comments">
+                    <div id="recipe-comments">
                         
                     </div>
                 </div>
