@@ -199,7 +199,7 @@ h1 {
 }
 
 .checked {
-    color: black;
+    color: white;
 }
 
 .recept-link:link {
@@ -213,4 +213,8 @@ h1 {
 .recept-link:hover {
     color: gray;
     text-decoration: none;
+}
+
+.ukloni-recept {
+    font-size: 10px;
 }

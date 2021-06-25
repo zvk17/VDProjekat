@@ -64,29 +64,39 @@ function loadOrInitRecipes() {
                 type: "G",                
                 level: 5,
                 idUser: 3,
-                comments: [],
+                comments: [
+                    {
+                        idUser: 2,
+                        comment: "Svaka cast, sve najbolje!"
+                    }
+                ],
                 reviews: []
             }, {
                 id: 5,
-                name: "Tiramisu",
-                idUser: 1,
+                name: "Tiramisu",                
                 duration: "40min",
                 description: "Žumance izmiksati sa šećerom u prahu i staviti da se kuva na pari dok se ne zgusne….oko 15-20 minuta dok se ne zgusne.Kad se dobro ohladi dodati maskarpone sir i malo umutiti. Posebno umutiti slatko vrhnje te i to dodati predhodnoj smeeši i ponovo umutiti mikserom. " +
                              "Piškote umakati u proceđenu crnu kafu kojoj se doda malo ruma i slagati na tacnu(pola piškota ide,dva reda po 12 komada)te na to stavimo kremu, pa opet natopljene piškote(dva reda po 12 komada) pa ostatak kreme.Sve to pospemo kakao prahom radi dekoracije. " +
                              "Ako pravite duplu meru nemojte fil zajedno mutiti za obe mere, mutite odvojeno jer iz iskustva znam da neće krema biti čvrsta kako treba da bude. Jednom sam pravila duplu meru i krema mi je bila mekša. Valjda je veća količina pa se nemože dobro umutiti. Prijatno!",
                 type: "D",
                 level: 3,
-                comments: [],
+                idUser: 1,
+                comments: [
+                    {
+                        idUser: 2,
+                        comment: "Odlican recept. Bas onako kako treba da se radi. Sve pohvale."
+                    }
+                ],
                 reviews: [
                     {
-                        userId: 2,
+
+                        idUser: 2,
                         mark: 4
                     }
                 ]
             }, {
                 id: 6,
-                name: "Piletina u bešamel sosu",
-                idUser: 2,
+                name: "Piletina u bešamel sosu",                
                 duration: "1h 20min",
                 description: "Rernu uključi da se zagreje na 180 stepeni. Krompir očistiti i iseći na tanje krugove debljine 3 mm. Crni luk sitno iseckati, a papriku iseckati na kockice. U odgovarajuću posudu sa nelepljivim dnom (ja sam koristila posudu vel. 24cm) staviti isečeni krompir, posuti ga sa solju, mlevenim biberom, timijanom i preliti sa vrlo malo ulja. Rukom dobro promešati krompir, poređati ga kružno u posudi i staviti da se peče 20 minuta. " +
                              "U dubljem tiganju staviti dve kašike ulja da se zagreje. Na zagrejano ulje dodati na kockice iseckanu piletinu i na srednjoj temperaturi pržiti dok meso ne pobeli i dok ne ispari suvišna voda koju je meso pustilo. Zatim dodati iseckani crni luk, pržiti dva minuta pa ubaciti iseckanu papriku, izdrobljenu čili papriku (ko ne jede ljuti neka izostavi čili papriku) i paradajz pire. Promešati i pržiti 2-3 minuta uz mešanje. Posuti suvim biljnim začinom i mlevenim biberom po ukusu, dodati iseckani peršun, sve dobro promešati i skloniti sa vatre na stranu. " +
@@ -94,14 +104,20 @@ function loadOrInitRecipes() {
                              "Bešamel sos: U odgovarajuću posudu staviti maslac i staviti posudu na šporet da se maslac otopi. U otopljeni maslac dodati brašno i mešati da se brašno sjedini sa masnoćom, da ne ostanu grudvice. Pržiti brašno na srednjoj temperaturi oko dva minuta pa sipati mleko. Žicom za mućenje mešati sve dok se sos ne zgusne. Skloniti ga sa vatre i dodati muskatni oraščić i suvi biljni začin i mleveni biber po ukusu. Preliti sos preko smese sa piletinom. Preko sosa rasporediti rendani kačkavalj. Vratiti u rernu na 180 stepeni još 20 minuta, odnosno dok kačkavalj ne dobije blago rumenu boju.",
                 type: "G",
                 level: 3,
-                comments: [],
+                idUser: 2,
+                comments: [
+                    {
+                        idUser: 2,
+                        comment: "Hvala svima na lepim komentarima!"
+                    }
+                ],
                 reviews: [
                     {
-                        userId: 2,
-                        mark: 5
+                        idUser: 2,
+                        mark: 4
                     }, {
-                        userId: 3,
-                        mark: 3
+                        idUser: 3,
+                        mark: 4
                     }
                 ]
             }
