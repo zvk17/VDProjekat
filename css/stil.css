@@ -180,6 +180,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 h1 {
     margin: 15px 0;
+    margin-top: 25px;
 }
 #comment-text-area {
     min-height: 95px;
@@ -217,4 +218,12 @@ h1 {
 
 .ukloni-recept {
     font-size: 10px;
+}
+.ads {
+    margin-top: 141px;
+}
+.ads img {
+    max-width: 100%;
+    margin: 14px 0;
+    
 }

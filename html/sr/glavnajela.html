@@ -10,6 +10,7 @@
     <script src="../../js/jquery-3.6.0.js"></script>
     <script>
         const RECIPE_TYPE = "G";
+        const LANGUAGE = "sr";
     </script>
     <script src="../../js/messages.sr.js"></script>
     <script src="../../js/Recipe.js"></script>
@@ -20,44 +21,56 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-center">
             <div class="col-11 col-lg-10 col-md-10">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h1>Glavna jela</h1>
-                    </div>
-                </div>
-                <div class="row d-flex justify-content-between">
-                    <div class="col-md-4 col-12 mb-md-0 mb-3 pl-0 pr-0 text-left">
+                <div class="row d-flex justify-content-lg-between justify-content-center">
+                    <div class="col-lg-9 col-12">
                         <div class="row">
-                            <div class="col-8 mr-0 pr-1">
-                                <input type="text" 
-                                    placeholder="Naziv recepta"
-                                    class="form-control"
-                                   id="recipe-search"
-                                />
-                            </div>
-                            <div class="col-4 pl-0">
-                                <button 
-                                    class="d-block w-100 btn btn-dark"
-                                    id="search-button">Pretraži</button>
+                            <div class="col-12 text-center">
+                                <h1>Glavna jela</h1>
                             </div>
                         </div>
-                                                
-                    </div>
-                    <div class="col-md-4 col-12 pr-0 pl-0">
                         <div class="row d-flex justify-content-between">
-                            <label for="recipe-sort" class="col-3 col-form-label">Sortiraj:</label>
-                            <div class="col-8">
-                                <select id="recipe-sort" class="form-control">
-                                    <option value="N"></option>
-                                    <option value="L">Po težini</option>
-                                    <option value="R">Po oceni</option>
-                                </select>
-                            </div>                            
-                        </div>                        
+                            <div class="col-md-4 col-12 mb-md-0 mb-3 pl-0 pr-0 text-left">
+                                <div class="row">
+                                    <div class="col-8 mr-0 pr-1">
+                                        <input type="text" 
+                                            placeholder="Naziv recepta"
+                                            class="form-control"
+                                        id="recipe-search"
+                                        />
+                                    </div>
+                                    <div class="col-4 pl-0">
+                                        <button 
+                                            class="d-block w-100 btn btn-dark"
+                                            id="search-button">Pretraži</button>
+                                    </div>
+                                </div>
+                                                        
+                            </div>
+                            <div class="col-md-4 col-12 pr-0 pl-0">
+                                <div class="row d-flex justify-content-between">
+                                    <label for="recipe-sort" class="col-3 col-form-label">Sortiraj:</label>
+                                    <div class="col-8">
+                                        <select id="recipe-sort" class="form-control">
+                                            <option value="N"></option>
+                                            <option value="L">Po težini</option>
+                                            <option value="R">Po oceni</option>
+                                        </select>
+                                    </div>                            
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="row" id="recipe-list"></div>
                     </div>
-                </div>
-                <div class="row" id="recipe-list"></div>
-            </div>
+                    <div class="col-lg-2 offset-lg-1 col-8 ads">
+                        <a target="_blank" href="https://planetasport.rs/">
+                            <img src="../../slike/baneri/planeta.jpg" class="img-fluid baner">
+                            
+                        </a>                     
+                        <img src="../../slike/baneri/bgnocu.png" class="img-fluid baner">
+                        <img src="../../slike/baneri/imlek.jpg" class="img-fluid baner">
+                    </div>
+                </div>                
+            </div>                
         </div>
         <!-- footer -->     
         <div class="row footer">

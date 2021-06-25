@@ -2,9 +2,11 @@ let recipes = loadOrInitRecipes();
 let users = ucitajKorisnike();
 let searchString = "";
 
+recipes = recipes.filter(recipe => recipe.language == LANGUAGE);
 if (!!RECIPE_TYPE) {
     recipes = recipes.filter(recipe => recipe.type == RECIPE_TYPE);
 }
+
 
 
 function recipeItem(recipe) {
