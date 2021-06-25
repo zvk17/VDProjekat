@@ -1,3 +1,4 @@
+//deo tekstualnog sadržaja preuzet sa recepti.com
 function loadOrInitRecipes() {
     let recipes = localStorage.getItem("recipes");
     if (recipes == null) {
@@ -17,6 +18,12 @@ function loadOrInitRecipes() {
                     }, {
                         idUser: 2,
                         text: "Baš dobar recept"
+                    }, {
+                        idUser: 2,
+                        text: "brzo se sprema"
+                    }, {
+                        idUser: 1,
+                        text:"ovaj losos je baš ukusan"
                     }
                 ],
                 reviews: [
@@ -35,21 +42,37 @@ function loadOrInitRecipes() {
                 id: 2,
                 name: "Palačinke",
                 duration: "15min",
-                description: "opis kako napraviti palačinke",
+                description: "Uzmite dublju plastičnu posudu i u nju sipajte brašno, dodajte jaja i oko 2 dl mleka. Probajte da umutite i ako ne ide dodajte još malo mleka. Savet: testo možete napraviti samo sa vodom ili samo sa mlekom. Najbolje je kada stavite pola mineralne vode i pola mleka. Važno je da testo bude gusto i da ga mutite dok ne postane glatko, bez grudvica, potom dodajte još mleka, pa malo kisele vode i tako dok ne dobijete testo koje liči na čorbu. U umućeno testo dodajte oko 1 dl ulja i dobro promešajte. Savet: testo će biti bolje ako ga pustite da odstoji 20-30 minuta. U tiganj sipajte ulje pa kad se zagreje izručite ulje, tako da tiganj ostane samo masan. Vratite ga na ringlu i onda sipajte kutlačom testo, koje treba da bude ravnomerno raspoređeno po tiganju. Temperatura na kojoj se palačinke peku mora biti visoka. Ostavite nekoliko trenutaka na ringli, a onda prevrnite nožem ili bacite u vis. Čim se ispeče jedna strana palačinke, okrenite je na drugu stranu i pecite isto koliko i prvu (otprilike oko 1 minut). Gotove palačinke izbacite na plitak tanjir i filujte.",
                 type: "D",
                 level: 2,
                 idUser: 1,
-                comments: [],
+                comments: [
+                    {
+                        idUser: 2,
+                        text: "evo jedan komentar i od mene"
+                    }, {
+                        idUser:1,
+                        text: "drugi komentar"
+                    }, {                        
+                        idUser: 3,
+                        text: "mnogo dobre palačinke"
+                    }
+                ],
                 reviews: []
             }, {
                 id: 3,                
-                name: "Ćufte",
-                duration: "45min",
-                description: "opis kako spremiti ćufte",
+                name: "Ćufte u sosu",
+                duration: "1h 30min",
+                description: "Izmešati sve navedene sastojke za ćufte i ostaviti najmanje 1/2 sata u frižideru, zatim oblikovati loptice željene veličine. Sos: Propržiti malo brašno na ulju, dodati pasirani paradajz, izmešati i polako dodavati vodu (sami odrediti gustinu sosa), zatim dodati začine. Čim proključa, dodavati jednu po jednu lopticu mesa, smanjiti temperaturu (samo da krčka) i kuvati oko 40 minuta. Služiti uz pire krompir.",
                 type: "G",                
                 level: 3,
                 idUser: 3,
-                comments: [],
+                comments: [
+                    {
+                        idUser: 4,
+                        text: "Odličan recept"
+                    }
+                ],
                 reviews: [
                     {
                         idUser: 3,
@@ -59,15 +82,15 @@ function loadOrInitRecipes() {
             }, {
                 id: 4,
                 name: "Piletina sa šampinjonima",
-                duration: "1h 30min",
-                description: "opis kako spremiti piletinu",
+                duration: "45min",
+                description: "Piletinu isecite na šnicle i začinite. Premažite senfom i ostavite da stoji i malo pokupi sve ukuse. Za to vreme na crnom i belom luku ispržite šampinjone iseckane na listiće, pa kada sva voda ispari dodajte pavlaku za kuvanje. Začinite. Kada malo uvri, sklonite sa vatre i dodajte svež peršunov list. Piletinu uvaljajte u brašno sa obe strane pa propržite kratko na ulju, tek da porumeni. U podmazanu đuvečaru poređajte piletinu, pa zalijte sosom od pečuraka. Pecite u rerni oko dvadesetak minuta na 200 stepeni.",
                 type: "G",                
                 level: 5,
                 idUser: 3,
                 comments: [
                     {
                         idUser: 2,
-                        comment: "Svaka cast, sve najbolje!"
+                        text: "Svaka cast, sve najbolje!"
                     }
                 ],
                 reviews: []
@@ -84,7 +107,7 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 2,
-                        comment: "Odlican recept. Bas onako kako treba da se radi. Sve pohvale."
+                        text: "Odlican recept. Bas onako kako treba da se radi. Sve pohvale."
                     }
                 ],
                 reviews: [
@@ -108,7 +131,7 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 2,
-                        comment: "Hvala svima na lepim komentarima!"
+                        text: "Hvala svima na lepim komentarima!"
                     }
                 ],
                 reviews: [

@@ -65,6 +65,9 @@ function findMyReview() {
     if (!currentRecipe) {
         return null;
     }
+    if (!currentUser) {
+        return null;
+    }
     let oldReview = currentRecipe.reviews.find(review => review.idUser == currentUser.id);    
     if (!oldReview)
         return null;
