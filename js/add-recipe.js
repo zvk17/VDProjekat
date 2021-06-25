@@ -53,6 +53,7 @@ $(document).ready(()=>{
         recipes.push({
             id: maxId,
             name: name,
+            language: messages.LANGUAGE,
             duration: duration,
             description: description,
             type: type,

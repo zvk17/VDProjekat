@@ -1,4 +1,5 @@
 window.messages = {
+    LANGUAGE: "sr",
     HARDNESS_LEVEL: "Nivo težine: ",
     AVERAGE_REVIEW: "Prosečna ocena: ",    
     MIN_NAME_LENGTH: "Minimalna dužina naslova je 5 znaka.",

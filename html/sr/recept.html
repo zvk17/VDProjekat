@@ -19,133 +19,145 @@
         <!-- NAVBAR -->
 
         <!-- NAVBAR -->
-        <div class="row d-flex justify-content-center">            
-            <div class="col-lg-9 col-md-10 col-12">                
-                <div id="recipe-view">
+        <div class="row d-flex justify-content-center">
+            <div class="col-11 col-lg-10 col-md-10">
+                <div class="row d-flex justify-content-md-between justify-content-center">
+                    <!---->
+                    <div class="col-lg-9 col-12">                
+                        <div id="recipe-view">                    
+                            <div class="row print-none mt-3">
+                                <div class="col-12">
+                                    <a class="recipe-link" href="../../index.html">Početna</a> 
+                                    > 
+                                    <a class="recipe-link" href="#" id="recipe-type-breadcrumb" >Tip jela</a> 
+                                    > 
+                                    <span class="recipe-name"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <h1 class="recipe-name" class="text-center"></h1>
+                                </div>
+                            </div>
+                            
+                            <div class="row d-flex justify-content-md-between">
+                                <div class="col-12 col-md-5 recipe-info-data">                
+                                    <p id="recipe-author">
+                                        
+                                    </p>
+                                    <p>Vreme pripreme: 
+                                        <span id="recipe-duration"></span>
+                                    </p>
+                                    <p id="recipe-average-review">
                     
-                    
-                    <div class="row print-none mt-3">
-                        <div class="col-12">
-                            <a class="recipe-link" href="../../index.html">Početna</a> 
-                            > 
-                            <a class="recipe-link" href="#" id="recipe-type-breadcrumb" >Tip jela</a> 
-                            > 
-                            <span class="recipe-name"></span>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-12">
-                            <h1 class="recipe-name" class="text-center"></h1>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-12 recipe-info-data">                
-                            <p id="recipe-author">
+                                    </p>
+                                </div>
+                                <div class="col-12 col-md-3 col-lg-2">
+                                    <button
+                                        id="page-print-button"
+                                        class="btn btn-dark print-none w-100">
+                                        Odštampaj
+                                    </button>
+                                    
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>Uputstvo za pripremu</h3>                
+                                    <p class="text-justify" id="recipe-description"></p>
+                                </div>
+                            </div>  
+                            <div class="row comment-section">
+                                <div class="col-12">
+                                    <h3>Ostavite komentar i ocenu</h3>
+                                </div>
+                            </div>
+                            
+                            <div id="comment-and-review" class="d-none">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4>Ocena</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p id="old-review" class="mb-0 recipe-info-data"></p>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-between justify-content-md-start">
+                                    
+                                    <label class="pr-0 col-5 col-md-3 col-form-label recipe-info-data" for="review-mark">Unesite ocenu (1-5):</label>
+                                    
+                                    <div class="col-3 col-md-2 pl-0">
+                                        <select id="review-mark" class="form-control">
+                                            <option value="0"></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-3 mt-3 mb-3">
+                                        <button id="make-review-button" class="w-100 btn btn-dark">
+                                            Oceni
+                                        </button>
+                                    </div>
+                                </div>                                                       
                                 
-                            </p>
-                            <p>Vreme pripreme: 
-                                <span id="recipe-duration"></span>
-                            </p>
-                            <p id="recipe-average-review">
-
-                            </p>
+                                
+                                <div class="row">
+                                    <div class="col-12"><h4>Komentar</h4></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <textarea 
+                                            id="comment-text-area"
+                                            class="form-control"
+                                            placeholder="Komentar"                                class="form-control"
+                                        ></textarea>
+                                    </div>
+                                    <div class="col-12 col-md-5 col-lg-3">
+                                        <button
+                                            id="comment-add-button"
+                                            class="btn btn-dark w-100 mt-3 mb-3 p-2">
+                                            Ostavi komentar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div id="cannot-comment-and-review" class="row d-none">
+                                <div class="col-12 recipe-info-data">
+                                    <p>Da biste ostavili komentar i ocenu morate biti prijavljeni</p>
+                                </div>
+                            </div>
+                                             
+                            <div class="row comment-section">
+                                <div class="col-12">
+                                    <h3>Komentari</h3>
+                                </div>
+                            </div>
+                            <div id="recipe-comments">
+                                
+                            </div>
                         </div>
-                    </div> 
-                    <div class="row">
-                        <div class="col-12 col-md-3 col-lg-2">
-                            <button
-                                id="page-print-button"
-                                class="btn btn-dark print-none w-100 p-2 mb-3">
-                                Odštampaj
-                            </button>
+                    </div>
+                    <div class="col-lg-2 offset-lg-1 col-6 ads ads-recipe-page print-none">
+                        <a target="_blank" href="https://planetasport.rs/">
+                            <img src="../../slike/baneri/planeta.jpg" class="img-fluid baner">
                             
-                        </div>
+                        </a>                     
+                        <img src="../../slike/baneri/bgnocu.png" class="img-fluid baner">
+                        <a target="_blank" href="https://www.imlek.rs/">
+                            <img src="../../slike/baneri/imlek.jpg" class="img-fluid baner">                            
+                        </a> 
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <h3>Uputstvo za pripremu</h3>                
-                            <p class="text-justify" id="recipe-description"></p>
-                        </div>
-                    </div>  
-                    <div class="row comment-section">
-                        <div class="col-12">
-                            <h3>Ostavite komentar i ocenu</h3>
-                        </div>
-                    </div>
-                    
-                    <div id="comment-and-review" class="d-none">
-                        <div class="row">
-                            <div class="col-12">
-                                <h4>Ocena</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="old-review" class="mb-0 recipe-info-data"></p>
-                            </div>
-                        </div>
-                        <div class="row justify-content-between justify-content-md-start">
-                            
-                            <label class="pr-0 col-5 col-md-3 col-form-label recipe-info-data" for="review-mark">Unesite ocenu (1-5):</label>
-                            
-                            <div class="col-3 col-md-2 pl-0">
-                                <select id="review-mark" class="form-control">
-                                    <option value="0"></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-3 mt-3 mb-3">
-                                <button id="make-review-button" class="w-100 btn btn-dark">
-                                    Oceni
-                                </button>
-                            </div>
-                        </div>                                                       
-                        
-                        
-                        <div class="row">
-                            <div class="col-12"><h4>Komentar</h4></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <textarea 
-                                    id="comment-text-area"
-                                    class="form-control"
-                                    placeholder="Komentar"                                class="form-control"
-                                ></textarea>
-                            </div>
-                            <div class="col-12 col-md-5 col-lg-3">
-                                <button
-                                    id="comment-add-button"
-                                    class="btn btn-dark w-100 mt-3 mb-3 p-2">
-                                    Ostavi komentar
-                                </button>
-                            </div>
-                        </div>
-                    </div> 
-                    <div id="cannot-comment-and-review" class="row d-none">
-                        <div class="col-12 recipe-info-data">
-                            <p>Da biste ostavili komentar i ocenu morate biti prijavljeni</p>
-                        </div>
-                    </div>
-                                     
-                    <div class="row comment-section">
-                        <div class="col-12">
-                            <h3>Komentari</h3>
-                        </div>
-                    </div>
-                    <div id="recipe-comments">
-                        
-                    </div>
+                    <!---->
                 </div>
-            </div>
+            </div>           
         </div>
         <!-- footer -->     
         <div class="row footer">
