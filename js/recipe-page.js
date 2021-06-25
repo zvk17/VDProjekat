@@ -5,7 +5,6 @@ let currentRecipe = recipes.find(recipe=>recipe.id== recipeId);
 let currentUser = localStorage.getItem("tekuciKorisnik");
 let colorMap = loadColors(users);
 
-
 if (currentUser != null)
     currentUser = JSON.parse(currentUser);
 
@@ -15,6 +14,36 @@ function loadColors(users) {
         colorMap.set(user.id, kreirajBojuNasumicno());
     })
     return colorMap;
+}
+function getMealType(recipeType) {
+    switch (recipeType) {
+        case "G": 
+            return {
+                text: messages.MAIN_COURSE,
+                link: messages.MAIN_COURSE_PAGE
+            }
+        case "D":
+            return {
+                text: messages.DESSERT,
+                link: messages.DESSERT_PAGE
+            };
+            
+        case "U":
+            return {
+                text: messages.SNACK,
+                link: messages.SNACK_PAGE
+            };
+        case "P":
+            return {
+                text: messages.APPERTIZER,
+                link: messages.APPERTIZER_PAGE
+            };
+        default:
+            return {
+                text: "",
+                link: ""
+            };
+    }
 }
 
 function getRecipeId() {
@@ -116,7 +145,8 @@ $(document).ready(()=>{
     //let $averageReview = $("#recipe-average-review");
     let $reviewMark = $("#review-mark");
     let $makeReviewButton = $("#make-review-button");
-
+    let $pagePrintButton = $("#page-print-button");
+    let $recipeTypeBreadcrumb = $("#recipe-type-breadcrumb");
 
     $recipeName.text(currentRecipe.name);
     $pageTitle.text(messages.SITE_NAME + " - " + currentRecipe.name);
@@ -124,6 +154,9 @@ $(document).ready(()=>{
     $recipeDuration.text(currentRecipe.duration);
     $recipeAuthor.text(messages.AUTHOR + author.ime + " " + author.prezime);
     //$averageReview.text(messages.AVERAGE_REVIEW + getReviewValue(currentRecipe));
+
+    let mealType = getMealType(currentRecipe.type);
+    $recipeTypeBreadcrumb.attr("href", mealType.link).text(mealType.text);
 
     if (!!currentUser) {
         $commentAndReview.removeClass("d-none");
@@ -162,10 +195,11 @@ $(document).ready(()=>{
                 idUser: currentUser.id
             });
         }
-
         localStorage.setItem("recipes", JSON.stringify(recipes));
         updateView();
     });
-
+    $pagePrintButton.on("click", ()=>{
+        window.print();
+    });
     updateView();
 });
