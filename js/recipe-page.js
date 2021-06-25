@@ -105,6 +105,7 @@ $(document).ready(()=>{
     
     let author = users.find(user => user.id == currentRecipe.idUser);
     let $recipeName = $(".recipe-name");
+    let $pageTitle = $("title");
     let $recipeDescription = $("#recipe-description");
     let $recipeDuration = $("#recipe-duration");
     let $recipeAuthor = $("#recipe-author");
@@ -118,6 +119,7 @@ $(document).ready(()=>{
 
 
     $recipeName.text(currentRecipe.name);
+    $pageTitle.text(messages.SITE_NAME + " - " + currentRecipe.name);
     $recipeDescription.text(currentRecipe.description);
     $recipeDuration.text(currentRecipe.duration);
     $recipeAuthor.text(messages.AUTHOR + author.ime + " " + author.prezime);

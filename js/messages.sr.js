@@ -12,6 +12,7 @@ window.messages = {
     ALREADY_REVIEWED: "Već ste ocenili ovaj recept ocenom: ",
     CHANGE_REVIEWED: "Promenite ocenu: ",
     MAKE_REVIEW: "Ocenite recept:",
+    SITE_NAME: "Kulinarstvo.com",
 
     LOGIN: "Prijavi se",
     LOGOUT: "Odjavi se",
