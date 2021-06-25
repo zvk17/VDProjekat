@@ -12,6 +12,7 @@ function loadOrInitRecipes() {
                 type: "G",
                 level: 4,
                 idUser: 4,
+                videos: ["https://www.youtube.com/embed/BWyX_8e0M5k"],
                 comments: [
                     {
                         idUser: 3,
@@ -48,6 +49,7 @@ function loadOrInitRecipes() {
                 type: "D",
                 level: 2,
                 idUser: 1,
+                videos:["https://www.youtube.com/embed/L2iPXjXi5aA"],
                 comments: [
                     {
                         idUser: 2,
@@ -70,6 +72,7 @@ function loadOrInitRecipes() {
                 type: "G",                
                 level: 3,
                 idUser: 3,
+                videos: ["https://www.youtube.com/embed/o0Evcvzucrs"],
                 comments: [
                     {
                         idUser: 4,
@@ -91,13 +94,14 @@ function loadOrInitRecipes() {
                 type: "G",                
                 level: 5,
                 idUser: 3,
+                videos:["https://www.youtube.com/embed/KkFSsJnmbdM"],
                 comments: [
                     {
                         idUser: 2,
                         text: "Svaka cast, sve najbolje!"
                     }, {
                         idUser: 1,
-                        text: "Savrsen recept!"
+                        text: "Savršen recept!"
                     }
                 ],
                 reviews: []
