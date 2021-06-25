@@ -61,6 +61,35 @@ function showComments() {
         $commentList.append($comment);
     });
 }
+function findMyReview() {
+    if (!currentRecipe) {
+        return null;
+    }
+    let oldReview = currentRecipe.reviews.find(review => review.idUser == currentUser.id);    
+    if (!oldReview)
+        return null;
+    return oldReview;
+}
+function showReview() {
+    let $averageReview = $("#recipe-average-review");
+    let $oldReview = $("#old-review");
+    $averageReview.text(messages.AVERAGE_REVIEW + getReviewValue(currentRecipe));
+    let myReview = findMyReview();
+    $oldReview.empty();
+    if (!!myReview) {
+        $oldReview.html(
+            "<b>" + messages.ALREADY_REVIEWED   + myReview.mark + 
+            "</b><br/>" + 
+            messages.CHANGE_REVIEWED
+        );
+    } else {
+        $oldReview.text(messages.MAKE_REVIEW);
+    }
+}
+function updateView() {
+    showComments();
+    showReview();
+}
 $(document).ready(()=>{
     if (!currentRecipe) {
         let $recipeView = $("#recipe-view");
@@ -80,12 +109,16 @@ $(document).ready(()=>{
     let $cannotCommentAndReview = $("#cannot-comment-and-review")
     let $commentTextArea = $("#comment-text-area");
     let $commentButton = $("#comment-add-button");
+    //let $averageReview = $("#recipe-average-review");
+    let $reviewMark = $("#review-mark");
+    let $makeReviewButton = $("#make-review-button");
+
 
     $recipeName.text(currentRecipe.name);
     $recipeDescription.text(currentRecipe.description);
     $recipeDuration.text(currentRecipe.duration);
-    $recipeAuthor.text(author.ime + " " + author.prezime);
-
+    $recipeAuthor.text(messages.AUTHOR + author.ime + " " + author.prezime);
+    //$averageReview.text(messages.AVERAGE_REVIEW + getReviewValue(currentRecipe));
 
     if (!!currentUser) {
         $commentAndReview.removeClass("d-none");
@@ -104,8 +137,30 @@ $(document).ready(()=>{
             text: comment
         });
         localStorage.setItem("recipes", JSON.stringify(recipes));
-        showComments();
+        updateView();
     });
 
-    showComments();
+    $makeReviewButton.on("click", ()=> {
+        let mark = parseInt($reviewMark.val());
+        if (mark == 0) {
+            return;
+        }
+        if (!currentUser) {
+            return;
+        }
+        let oldReview = findMyReview();
+        if (!!oldReview) {
+            oldReview.mark = mark;
+        } else {
+            currentRecipe.reviews.push({
+                mark: mark,
+                idUser: currentUser.id
+            });
+        }
+
+        localStorage.setItem("recipes", JSON.stringify(recipes));
+        updateView();
+    });
+
+    updateView();
 });

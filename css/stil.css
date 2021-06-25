@@ -5,11 +5,15 @@
 }
 
 .footer {
-    margin-top: 100px;    
+    margin-top: 50px;    
     text-align: center;
     background-color: #343a40;
     color: lightgray;
+    border-top: 5px solid grey;
     font-size: 14px; 
+}
+.moj-nalog-footer {
+    margin-top: 100px;
 }
 
 .footer hr {
@@ -67,9 +71,6 @@
 }
 .recipe-item:first-child {
     margin-top: 28px;
-}
-.recipe-item:last-child, .comment-item:last-child {
-    margin-bottom: 28px;
 }
 .recipe-item a, .recipe-item a:hover, .recipe-item a:visited {
     padding: 20px 30px;

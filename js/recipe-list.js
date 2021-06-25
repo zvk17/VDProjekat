@@ -25,8 +25,8 @@ function recipeItem(recipe) {
         .text(messages.HARDNESS_LEVEL + recipe.level);
     let $review = $("<div>")
         .addClass("col-12")
-        .text(messages.REVIEW + review);
-
+        .text(messages.AVERAGE_REVIEW + review);
+    
     let $commentsNumber = $("<span>")
         .text(commentsNumber)
         .addClass("broj-komentara");

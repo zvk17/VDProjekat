@@ -1,6 +1,6 @@
 window.messages = {
     HARDNESS_LEVEL: "Nivo težine: ",
-    REVIEW: "Prosečna ocena: ",    
+    AVERAGE_REVIEW: "Prosečna ocena: ",    
     MIN_NAME_LENGTH: "Minimalna dužina naslova je 5 znaka.",
     DESCRIPTION_REQUIRED: "Potrebno je uneti uputstvo za recept",
     DURATION_REQUIRED: "Obavezno je uneti duzinu spremanja jela",
@@ -9,7 +9,9 @@ window.messages = {
     RECIPE_NOT_FOUND: "Nije pronađen nijedan recept sa datim imenom",
     RECIPE_PAGE: "recept.html",
     RECIPE_NOT_EXIST: "Dati recept ne postoji",
-
+    ALREADY_REVIEWED: "Već ste ocenili ovaj recept ocenom: ",
+    CHANGE_REVIEWED: "Promenite ocenu: ",
+    MAKE_REVIEW: "Ocenite recept:",
 
     LOGIN: "Prijavi se",
     LOGOUT: "Odjavi se",
@@ -24,5 +26,5 @@ window.messages = {
     REGISTER_PASSWORD_MIN_LENGTH: "Lozinka mora da ima bar 8 karaktera.",
     REGISTER_LASTNAME_ALPHA: "Prezime se sastoji samo od slova.",
     REGISTER_USERNAME_ALPHA: "Korisničko ime se sastoji samo od slova.",
-    DELETE: "Obrisi"
+    DELETE: "Obriši"
 };
