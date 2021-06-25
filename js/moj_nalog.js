@@ -28,7 +28,7 @@ $(document).ready(function() {
                 podaci.append(tezina);
                 podaci.append(ocena);
 
-                let komentari = $("<div>").attr("class", "col-xl-3 col-lg-12 col-md-3");
+                let komentari = $("<div>").attr("class", "col-xl-3 col-lg-12 col-md-3 text-right");
                 let brojKomentara = $("<div>").attr("class", "broj-komentara bg-dark w-75").text(recepti[i].comments.length);
                 let obrisi = $("<div>").append(
                     $("<button>").attr("class", "btn btn-outline-dark mt-3 ukloni-recept").attr("id", "b-" + recepti[i].id).text(messages.DELETE)

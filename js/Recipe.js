@@ -91,6 +91,9 @@ function loadOrInitRecipes() {
                     {
                         idUser: 2,
                         text: "Svaka cast, sve najbolje!"
+                    }, {
+                        idUser: 1,
+                        text: "Savrsen recept!"
                     }
                 ],
                 reviews: []
@@ -105,6 +108,10 @@ function loadOrInitRecipes() {
                 level: 3,
                 idUser: 1,
                 comments: [
+                    {
+                        idUser: 4,
+                        text: "Savrsen recept bravo"
+                    },
                     {
                         idUser: 2,
                         text: "Odlican recept. Bas onako kako treba da se radi. Sve pohvale."
@@ -130,6 +137,10 @@ function loadOrInitRecipes() {
                 idUser: 2,
                 comments: [
                     {
+                        idUser: 3,
+                        text: "Isprobano i samo mogu reći svaka čast sve je kako pise!!!"
+                    },
+                    {
                         idUser: 2,
                         text: "Hvala svima na lepim komentarima!"
                     }
@@ -140,6 +151,60 @@ function loadOrInitRecipes() {
                         mark: 4
                     }, {
                         idUser: 3,
+                        mark: 4
+                    }
+                ]
+            }, {
+                id: 7,
+                name: "Koktel rolnice sa sirom",                
+                duration: "2h",
+                description: "Koktel rolnice sa sirom su predviđene za sve vrste rođendana ili kada vam dolazi društvance, pa kao grickalica. Brzo se prave i od ove količine se dobije dva puna pleha od rerne, plus jedan mali, jer preostane nekih 6 – 8 komada. Ja sam ih pravila od dva pakovanja kora, tačnije kilograma, pa ću tu meru i pisati. Ova mera je nekako i pogodna za neko okupljanje, naravno uz još neko pecivo ili piticu.",
+                type: "P",
+                level: 4,
+                idUser: 4,
+                comments: [],
+                reviews: [
+                    {
+                        idUser: 2,
+                        mark: 2
+                    }, {
+                        idUser: 3,
+                        mark: 5
+                    }
+                ]
+            }, {
+                id: 8,
+                name: "Hladno predjelo od jogurta",                
+                duration: "2h",
+                description: "Prelepo, dekorativno hladno predjelo u kojem je osnovni sastojak jogurt. Nemojte se plašiti želatina, ako postupate po uputstvu ne može da omane. Možete čak i da napravite probu od pola mere, onako za sebe, da vidite kako će da ispadne, isprobate i onda vidite za sledeći put. Meni se izuzetno dopada jer se pravi ranije, onda mi ostaje vremena da radim nešto drugo, pripremam neke druge djakonije. Odličan je u vreme proslava, rodjendan, slava, prazika, generalno svih svečanosti.  Šargarepu skuvati i iseckati na kolutiće. Jaja obariti pa i njih iseći na kolutove, isto tako iseckati i krastavce. Želatin potopiti u malo hladne vode ( 50 ml ) i ostaviti da nabubri. Stavite sve u malo veću posudu od one koju ste planirali za želatin da pored njega može da stane još nekih 100 ml. Pomešati jogurt, majonez i so pa zagrevati do tačke ključanja, taman dok želatin nabubri. Kada je jogurt skoro provrio skloniti ga sa vatre, pa uzeti jednu kutlaču te mase i dodati u želatin. Mešati da se želatin otopi. Otopljen je kada nema tvrdih delova, nema granulica u masi i sve je fino glatko. Sada tu masu vratiti u jogurt i dobro izmešati. Možete probati da vidite da li je dovoljno slano. Uzeti pleh dimenzija 25 x 40 ili 30 x 35 ili tako nekih sličnih. Ne veliki od rerne, malo manji. Na dno poslagati pola praške šunke, kutlačom staviti deo jogurta, pa poslagati red šargarepe, pa opet jogurt, krastavci, jogurt, pa jaja, opet jogurt i red šunkarice, na kraju završiti ostatakom jogurta. Možete slagati i redom koji vi želite, kao i dodavati i oduzimati sastojke koje vi volite. Ostaviti preko noći u frižideru, pa sutradan ili prekosutra seći i služiti. Kada se u frižideru  jogurt stegne poklopite nečim. Folijom, nekom daskom za sečenje mesa ili nečim sličnim. Prijatno.",
+                type: "P",
+                level: 1,
+                idUser: 3,
+                comments: [],
+                reviews: [
+                    {
+                        idUser: 4,
+                        mark: 2
+                    }, {
+                        idUser: 1,
+                        mark: 5
+                    }
+                ]
+            }, {
+                id: 9,
+                name: "Brza posna čorba",                
+                duration: "1h",
+                description: "Jednostavna i brza posna čorba, ili čorbica bez mesa. Odlična je i zimi, a i leti, možda uz dodatak jajeta i pavlake, onda baš osvežava. Za post preporučujem posne čorbice neke ćuftice od povrća i sočni krompir iz rerne, a za dane kada nije post neko mesice i salaticu. Home » Čorbe » Brza posna čorba Brza posna čorba in Čorbe, Posna jela, Posna jela Mar 26, 2021 5,004 Views Jednostavna i brza posna čorba, ili čorbica bez mesa. Odlična je i zimi, a i leti, možda uz dodatak jajeta i pavlake, onda baš osvežava. Za post preporučujem posne čorbice neke ćuftice od povrća i sočni krompir iz rerne, a za dane kada nije post neko mesice i salaticu. brza posna corba Sastojci: 1 glavica crnog luka 100 ml ulja ( ako pravite na vodi, izuzmite ) 1 kašika suvog začina, so i biber 1 kg mešanog povrća, ja sam koristila za rusku salatu ( svo povrće može biti i sveže, ali kada se nema puno vremena ili povrća najlakše je iskoristiti već pomenutu mešavinu ) 1 kašika brašna Priprema: iseckati glavicu crnog luka, dodati so i ulje, pa na srednjoj vatri malo prodinstati, da zastakli, a onda naliti čašu vode i ostaviti da se još dodatno prodinsta i omekani. Na luk dodati mešavinu povrća, naliti vode da prelije povrće i kuvati oko 30 minuta uz proveravanje količine vode. Dodavati ukoliko je potrebno vrelu vodu, da se proces kuvanja ne prekida. Kada je povrće skuvano sami regulišete količinu vode, zavisno da li volite gušće ili redje. Na počeku je najbolje da imate manje vode, da vam se ne desi da želite manje čorbe a imate previše i onda morate da odlivate ili kuvate dok ne ispari pa tako raskuvate povrće. Posle regulisanja količine vode u jednoj maloj posudi umutite brašno sa 100 ml vode, da nema grudvica, sklonite sa vatre lonac sa čorbom, istresite brašno i brzo mešajte. Vratite na vatru da se kuva još 5 minuta, kako bi se brašno ukuvalo. Na kraju možete da dosolite, dodate bibera ili začina po ukusu, peršuna ili mirođije.",
+                type: "P",
+                level: 2,
+                idUser: 2,
+                comments: [],
+                reviews: [
+                    {
+                        idUser: 3,
+                        mark: 2
+                    }, {
+                        idUser: 1,
                         mark: 4
                     }
                 ]
