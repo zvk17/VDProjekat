@@ -21,7 +21,7 @@ $(document).ready(function() {
                 let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);                            
                 let naziv = $("<h5>").text(recepti[i].name);                
                 let tezina = $("<div>").text(messages.HARDNESS_LEVEL + recepti[i].level);
-                let ocena = $("<div>").text(messages.REVIEW + prosek);
+                let ocena = $("<div>").text(messages.AVERAGE_REVIEW + prosek);
 
                 link.append(naziv);
                 podaci.append(link);
@@ -55,14 +55,25 @@ $(document).ready(function() {
 
     function izbrisiRecept(id) {
         for (let i = 0; i < recepti.length; i++) {
+            let rld = false;
             if (recepti[i].id == id) {
+                for (let j = 0; j < recepti[i].comments.length; j++) {
+                    if (recepti[i].comments[j].idUser == korisnik.id) {
+                        rld = true;
+                        break;
+                    }
+                }
+
                 recepti.splice(i, 1);
                 localStorage.setItem("recipes", JSON.stringify(recepti));
+
+                if (rld) {
+                    location.reload();
+                }
+
                 break;
-            }            
-            // izbrisi komentare svoje
-        }
-        location.reload();
+            }                        
+        }        
     }
 
     function popuniOcene() {
@@ -102,7 +113,7 @@ $(document).ready(function() {
                     let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);                            
                     let naziv = $("<h5>").text(recepti[i].name);                    
 
-                    let komentar = $("<div>").text(recepti[i].comments[j].comment);
+                    let komentar = $("<div>").text(recepti[i].comments[j].text);
 
                     link.append(naziv);
                     red.append(link);

@@ -67,7 +67,7 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 2,
-                        comment: "Svaka cast, sve najbolje!"
+                        text: "Svaka cast, sve najbolje!"
                     }
                 ],
                 reviews: []
@@ -84,7 +84,7 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 2,
-                        comment: "Odlican recept. Bas onako kako treba da se radi. Sve pohvale."
+                        text: "Odlican recept. Bas onako kako treba da se radi. Sve pohvale."
                     }
                 ],
                 reviews: [
@@ -108,7 +108,7 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 2,
-                        comment: "Hvala svima na lepim komentarima!"
+                        text: "Hvala svima na lepim komentarima!"
                     }
                 ],
                 reviews: [
