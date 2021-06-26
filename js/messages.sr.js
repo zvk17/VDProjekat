@@ -36,5 +36,6 @@ window.messages = {
     REGISTER_PASSWORD_MIN_LENGTH: "Lozinka mora da ima bar 8 karaktera.",
     REGISTER_LASTNAME_ALPHA: "Prezime se sastoji samo od slova.",
     REGISTER_USERNAME_ALPHA: "Korisničko ime se sastoji samo od slova.",
-    DELETE: "Obriši"
+    DELETE: "Obriši",
+    MARK: "Ocena: "
 };

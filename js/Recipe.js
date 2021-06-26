@@ -63,7 +63,8 @@ function loadOrInitRecipes() {
                     }
                 ],
                 reviews: []
-            }, {
+            }, 
+            {
                 id: 3,         
                 language: "sr",       
                 name: "Ćufte u sosu",
@@ -221,6 +222,69 @@ function loadOrInitRecipes() {
                         mark: 4
                     }
                 ]
+            }, {
+                id: 10,
+                language: "sr",
+                name: "Keks sa nutellom",
+                duration: "35min",
+                description: "U vanglicu razbiti jaje, dodati nutellu i mikserom umutiti. Ubaciti brašno i dobro sjediniti mikserom (ako treba poslužite se na kraju i špatulom ili kašikom). Testo prebaciti na providnu foliju i oblikovati duži valjak koji će se kasnije iseći na 20 jednakih delova. Testo uviti u foliju i ostaviti u frižider 20 minuta." +
+                             "Preko velikog pleha od električnog šporeta staviti pek papir. Testo izvaditi iz frižidera i oštrim nožem ga podeliti na 20 jednakih delova. Svaki deo rukama oblikovati u kuglicu i poređati ih na pripremljeni pleh. Kuglice ređati na odstojanju jedne od drugih. Drškom od varjače pritisnuti svaku kuglicu da se napravi udubljenje za punjenje. Rernu uključiti da se zagreje na 180 stepeni." +
+                             "Punjenje keksa: U kesu za zamrzivač sipati nutellu. Odseći vrh kese i napuniti keksiće. Po površini posuti iseckanim lešnicima. Staviti keks da se peče 10 minuta. Pazite da ih ne prepečete, jer će biti tvrdi (čim donji deo keksa malo očvrsne pečeni su). Ostaviti keks da se ohladi u plehu, pa ga prebaciti na tacnu za posluženje.",
+                type: "D",
+                level: 2,
+                idUser: 3,                
+                comments: [
+                    {
+                        idUser: 2,
+                        text: "Vrlo zanimljivo"
+                    }
+                ],
+                reviews: []
+            }, {
+                id: 11,
+                language: "sr",
+                name: "Slane minjon kocke",
+                duration: "25min",
+                description: "Belanca odvojimo od žumanaca, belanca izlupamo u čvrst šam sa malo soli zati dodajemo jedno po jedno žumance, lagano mešajući dodajemo skuvani I usitnjeni španać zatim brašno sa praškom za pecivo. Smesu sipamo u pleh obložen pek papirom." +
+                             "Pečemo na, 180C oko 15 minuta, kad se kora ohladi podelimo na dva jednaka dela." +
+                             "Pavlaku sjedinimo sa krem sirom unapred spremljene palačinke premažemo namazom od pavlake i narendamo šunkaricu." +
+                             "Koru premažemo polovinom fila i poređamo urolane palačinke po dužini. Popunimo filom prazninu između palačinke, a ostatak fila premažemo preko njih. Poklopimo drugim delom kore blago pritisnem i ostavim par sati da odstoji pre serviranja. Sečemo prvo po dužini 5 ako sa rez prolazi i među palačinke, a zati sečemo parčiće.",                             
+                type: "U",
+                level: 3,
+                idUser: 1,                
+                comments: [
+                    {
+                        idUser: 3,
+                        text: "Vrlo zanimljivo"
+                    }
+                ],
+                reviews: []
+            }, {
+                id: 12,
+                language: "sr",
+                name: "Slane kuglice",
+                duration: "25min",
+                description: "Susam staviti na suvom tiganju i malo ga propržiti dok ne dobije boju. Ostaviti sa strane da se ohladi." +
+                             "Feta sir izgnjeciti viljuskom. Krekere samleti u secka ili na mašini za orahe." +
+                             "Pomešati feta sir, mlevene krekere i pavlaku. Napraviti ujednacenu smesu. Formirati kuglice pa svaku uvalhati u susam. Ostaviti da se dobro ohladi pa poslužiti.",                             
+                type: "U",
+                level: 2,
+                idUser: 4,                
+                comments: [],
+                reviews: []
+            }, {
+                id: 13,
+                language: "sr",
+                name: "Heljdini mafini sa sirom",
+                duration: "15min",
+                description: "Jaja umutiti malo žicom pa dodati jogurt, ulje, kiselu vodu, so, mleveni lan. Promešati vajračom, a zatim dodati brašno pomešanim sa praškom za pecivo. Sjediniti varjačom. Testi je ređe." +
+                             "Puniti kalupe mafina smesom, stavljati po 1 kašiku smese, zatim staviti parče sira, a potom posuti sa semenkama golice." +
+                             "Peći na 180C oko 20-ak minuta. Prijatno!",                             
+                type: "U",
+                level: 3,
+                idUser: 4,                
+                comments: [],
+                reviews: []
             }
         ];
         localStorage.setItem("recipes", JSON.stringify(recipes));

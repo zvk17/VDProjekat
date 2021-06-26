@@ -245,3 +245,9 @@ h1 {
 .ads-recipe-page {
     margin-top: 106px!important;
 }
+
+.logo {
+    width: 120px;
+    padding: 0;
+    margin: 0;
+}

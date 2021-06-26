@@ -41,11 +41,10 @@ $(document).ready(function() {
         $("#rh1").text(recept1.name);
         $("#rh2").text(recept2.name);
         $("#rh3").text(recept3.name);
-
-        // izmena
-        $("#rp1").text("Ocena: " + ocena1.toFixed(1));
-        $("#rp2").text("Ocena: " + ocena2.toFixed(1));
-        $("#rp3").text("Ocena: " + ocena3.toFixed(1));
+        
+        $("#rp1").text(messages.MARK + ocena1.toFixed(1));
+        $("#rp2").text(messages.MARK + ocena2.toFixed(1));
+        $("#rp3").text(messages.MARK + ocena3.toFixed(1));
         
         let tip1 = dohvatiTip(recept1.type);
         let tip2 = dohvatiTip(recept2.type);
@@ -54,11 +53,10 @@ $(document).ready(function() {
         $("#img-r1").attr("src", "slike/" + tip1 + "/" + recept1.name + ".jpg");                
         $("#img-r2").attr("src", "slike/" + tip2 + "/" + recept2.name + ".jpg");
         $("#img-r3").attr("src", "slike/" + tip3 + "/" + recept3.name + ".jpg");
-
-        // izmena
-        $("#l1").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept1.id);
-        $("#l2").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept2.id);
-        $("#l3").attr("href", "html/sr/" + messages.RECIPE_PAGE + "?id=" + recept3.id);
+        
+        $("#l1").attr("href", "html/" + LANGUAGE + "/" + messages.RECIPE_PAGE + "?id=" + recept1.id);
+        $("#l2").attr("href", "html/" + LANGUAGE + "/" + messages.RECIPE_PAGE + "?id=" + recept2.id);
+        $("#l3").attr("href", "html/" + LANGUAGE + "/" + messages.RECIPE_PAGE + "?id=" + recept3.id);
     }
 
     function dohvatiTip(tip) {

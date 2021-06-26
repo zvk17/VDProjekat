@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/stil.css" />
     <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/bootstrap.js"></script>    
     <script>
         const RECIPE_TYPE = "D";
         const LANGUAGE = "sr";
@@ -18,7 +19,51 @@
     <script src="../../js/recipe-list.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid p-0 overflow-hidden">
+        <div class="row">
+            <div class="col header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="../../index.html"><img class="logo img-fluid" src="../../slike/logo/logo3.png" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../index.html">Početna
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                                        Recepti
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="predjela.html">Predjelo</a>
+                                        <a class="dropdown-item" href="glavnajela.html">Glavno jelo</a>
+                                        <a class="dropdown-item" href="deserti.html">Desert</a>
+                                        <a class="dropdown-item" href="uzine.html">Užina</a>
+                                    </div>
+                                </li>
+                                <li id="dodaj-recept" class="nav-item">
+                                    <a class="nav-link" href="dodaj_novi_recept.html">Dodaj recept</a>
+                                </li>
+                                <li id="moj-nalog" class="nav-item">
+                                    <a class="nav-link" href="moj_nalog.html">Moj nalog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">O nama</a>
+                                </li>                                
+                                <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
+                                    <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
+                                </li>                
+                            </ul>
+                        </div>                        
+                    </div>
+                </nav>
+            </div>
+        </div>
         <div class="row d-flex justify-content-center">
             <div class="col-11 col-lg-10 col-md-10">
                 <div class="row d-flex justify-content-lg-between justify-content-center">
