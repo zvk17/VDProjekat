@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kulinarstvo.com - Deserti</title>
+    <title>Kulinarstvo.com - Add new recipe</title>
     <link rel="stylesheet" href="../../css/bootstrap.css">
-    <link rel="stylesheet" href="../../css/stil.css" />
+    <link rel="stylesheet" href="../../css/stil.css">
     <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/bootstrap.js"></script>    
-    <script>
-        const RECIPE_TYPE = "D";
-        const LANGUAGE = "sr";
-    </script>
-    <script src="../../js/navigacija.js"></script>
     <script src="../../js/messages.sr.js"></script>
+    <script src="../../js/bootstrap.js"></script>
     <script src="../../js/Recipe.js"></script>
-    <script src="../../js/korisnici.js"></script>
-    <script src="../../js/recipe-list.js"></script>
+    <script src="../../js/add-recipe.js"></script>
+    <link rel="stylesheet" href="../../css/stil.css">
 </head>
 <body>
     <div class="container-fluid p-0 overflow-hidden">
@@ -33,10 +28,10 @@
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
                                     <a class="nav-link" href="../../index.html">Početna
-                                        <span class="sr-only">(current)</span>
+                                        <!-- <span class="sr-only">(current)</span> -->
                                     </a>
                                 </li>
-                                <li class="nav-item dropdown active">
+                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                                         Recepti
                                     </a>
@@ -47,7 +42,7 @@
                                         <a class="dropdown-item" href="uzine.html">Užina</a>
                                     </div>
                                 </li>
-                                <li id="dodaj-recept" class="nav-item">
+                                <li id="dodaj-recept" class="nav-item active">
                                     <a class="nav-link" href="dodaj_novi_recept.html">Dodaj recept</a>
                                 </li>
                                 <li id="moj-nalog" class="nav-item">
@@ -66,59 +61,67 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-11 col-lg-10 col-md-10">
-                <div class="row d-flex justify-content-lg-between justify-content-center">
-                    <div class="col-lg-9 col-12">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <h1>Deserti</h1>
-                            </div>
-                        </div>
-                        <div class="row d-flex justify-content-between">
-                            <div class="col-md-4 col-12 mb-md-0 mb-3 pl-0 pr-0 text-left">
-                                <div class="row">
-                                    <div class="col-8 mr-0 pr-1">
-                                        <input type="text" 
-                                            placeholder="Naziv recepta"
-                                            class="form-control"
-                                        id="recipe-search"
-                                        />
-                                    </div>
-                                    <div class="col-4 pl-0">
-                                        <button 
-                                            class="d-block w-100 btn btn-dark"
-                                            id="search-button">Pretraži</button>
-                                    </div>
-                                </div>
-                                                        
-                            </div>
-                            <div class="col-md-4 col-12 pr-0 pl-0">
-                                <div class="row d-flex justify-content-between">
-                                    <label for="recipe-sort" class="col-3 col-form-label">Sortiraj:</label>
-                                    <div class="col-8">
-                                        <select id="recipe-sort" class="form-control">
-                                            <option value="N"></option>
-                                            <option value="L">Po težini</option>
-                                            <option value="R">Po oceni</option>
-                                        </select>
-                                    </div>                            
-                                </div>                        
-                            </div>
-                        </div>
-                        <div class="row" id="recipe-list"></div>
+            <div class="col-12 col-md-8 col-lg-5">                
+
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">Add recipe</h1>
+                    </div>                        
+                </div> 
+                <div class="row mb-3">
+                    <label for="dish-name" class="col-sm-5 col-form-label">Dish name:</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="dish-name">
                     </div>
-                    <div class="col-lg-2 offset-lg-1 col-6 ads">
-                        <a target="_blank" href="https://planetasport.rs/">
-                            <img src="../../slike/baneri/planeta.jpg" class="img-fluid baner">
-                            
-                        </a>                     
-                        <img src="../../slike/baneri/bgnocu.png" class="img-fluid baner">
-                        <a target="_blank" href="https://www.imlek.rs/">
-                            <img src="../../slike/baneri/imlek.jpg" class="img-fluid baner">                            
-                        </a>
+                </div>
+                <div class="row mb-3">
+                    <label for="dish-type" class="col-sm-5 col-form-label">Dish type:</label>
+                    <div class="col-sm-7">
+
+                        <select id="dish-type" class="form-control">
+                            <option value="P" selected>Appertizer</option>
+                            <option value="G">Main course</option>
+                            <option value="D">Dessert</option>
+                            <option value="U" >Snack</option>                            
+                        </select>
                     </div>
-                </div>                
-            </div>                
+                </div>
+                <div class="row mb-3">
+                    <label for="dish-level" class="col-sm-5 col-form-label">Nivo težine:</label>
+                    <div class="col-sm-7">
+
+                        <select id="dish-level" class="form-control">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>   
+                            <option value="5">5</option>                           
+                        </select>
+                    </div>
+                </div> 
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="dish-description" class="form-label">Uputstvo za pripremu:</label>
+                        <textarea class="form-control" id="dish-description" rows="3"></textarea>
+                    </div>                    
+                </div> 
+                <div class="row mb-3">
+                    <label for="dish-duration" class="col-sm-5 col-form-label">Trajanje pripreme:</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="dish-duration">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="d-none text-danger text-center" id="dish-error">Nisu uneta sva polja</div>
+                    </div>                    
+                </div>
+                <div class="row mb-3 text-center">
+                    <div class="col-12">
+                        <button id="dish-submit" class="btn btn-dark">Add recipe</button>
+                    </div>                    
+                </div>
+            </div>            
         </div>
         <!-- footer -->     
         <div class="row footer">
@@ -129,7 +132,7 @@
                 <p class="p-0 m-0 mb-3">© Copyright 2021</p>
             </div>
         </div>
-        <!-- footer -->     
+        <!-- footer --> 
     </div>
 </body>
 </html>
