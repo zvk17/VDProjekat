@@ -8,55 +8,65 @@
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/stil.css" />
     <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/bootstrap.js"></script>    
+    <script src="../../js/bootstrap.js"></script>
     <script src="../../js/messages.en.js"></script>
     <script src="../../js/generisanje_slike.js"></script>
     <script src="../../js/Recipe.js"></script>
     <script src="../../js/korisnici.js"></script>
     <script src="../../js/recipe-page.js"></script>
     <script src="../../js/navigacija.js"></script>
+    <script src="../../js/promena_jezika.js"></script>
 <body>
     <div class="container-fluid p-0 overflow-hidden">
         <div class="row print-none">
             <div class="col header">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
-                        <a class="navbar-brand" href="../../index.html"><img class="logo img-fluid" src="../../slike/logo/logo3.png" alt=""></a>
+                        <a class="navbar-brand" href="../../index_en.html"><img class="logo img-fluid" src="../../slike/logo/logo3.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarResponsive">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../../index.html">Početna
+                                    <a class="nav-link" href="../../index_en.html">Home
                                         <span class="sr-only">(current)</span>
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown active">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                                        Recepti
+                                        Recipes
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="predjela.html">Predjelo</a>
-                                        <a class="dropdown-item" href="glavnajela.html">Glavno jelo</a>
-                                        <a class="dropdown-item" href="deserti.html">Desert</a>
-                                        <a class="dropdown-item" href="uzine.html">Užina</a>
+                                        <a class="dropdown-item" href="predjela.html">Appertizer</a>
+                                        <a class="dropdown-item" href="glavnajela.html">Main course</a>
+                                        <a class="dropdown-item" href="deserti.html">Dessert</a>
+                                        <a class="dropdown-item" href="uzine.html">Snack</a>
                                     </div>
                                 </li>
                                 <li id="dodaj-recept" class="nav-item">
-                                    <a class="nav-link" href="dodaj_novi_recept.html">Dodaj recept</a>
+                                    <a class="nav-link" href="dodaj_novi_recept.html">Add new recipe</a>
                                 </li>
                                 <li id="moj-nalog" class="nav-item">
-                                    <a class="nav-link" href="moj_nalog.html">Moj nalog</a>
+                                    <a class="nav-link" href="moj_nalog.html">My profile</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">O nama</a>
-                                </li>                                
+                                    <a class="nav-link" href="o_nama.html">About</a>
+                                </li>
                                 <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
-                                    <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
-                                </li>                
+                                    <a id="odjava" class="nav-link" href="prijava.html">Log out</a>
+                                </li>
+                                <li class="nav-item dropdown ml-lg-5 ml-md-0">
+                                    <a class="nav-link dropdown-toggle" href="#" id="jezik" role="button" data-toggle="dropdown">
+                                        English
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="jezik">
+                                        <a id="srpski" class="dropdown-item" href="#">Srpski</a>
+                                        <a id="engleski" class="dropdown-item" href="#">English</a>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>                        
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -65,34 +75,34 @@
             <div class="col-11 col-lg-10 col-md-10">
                 <div class="row d-flex justify-content-md-between justify-content-center">
                     <!---->
-                    <div class="col-lg-9 col-12">                
-                        <div id="recipe-view">                    
+                    <div class="col-lg-9 col-12">
+                        <div id="recipe-view">
                             <div class="row print-none mt-3">
                                 <div class="col-12">
-                                    <a class="recipe-link" href="../../index.html">Home</a> 
-                                    > 
-                                    <a class="recipe-link" href="#" id="recipe-type-breadcrumb" >Tip jela</a> 
-                                    > 
+                                    <a class="recipe-link" href="../../index_en.html">Home</a>
+                                    >
+                                    <a class="recipe-link" href="#" id="recipe-type-breadcrumb" >Tip jela</a>
+                                    >
                                     <span class="recipe-name"></span>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-12">
                                     <h1 class="recipe-name" class="text-center"></h1>
                                 </div>
                             </div>
-                            
+
                             <div class="row d-flex justify-content-md-between">
-                                <div class="col-12 col-md-5 recipe-info-data">                
+                                <div class="col-12 col-md-5 recipe-info-data">
                                     <p id="recipe-author">
-                                        
+
                                     </p>
-                                    <p>Preparation time: 
+                                    <p>Preparation time:
                                         <span id="recipe-duration"></span>
                                     </p>
                                     <p id="recipe-average-review">
-                    
+
                                     </p>
                                 </div>
                                 <div class="col-12 col-md-3 col-lg-2">
@@ -101,18 +111,18 @@
                                         class="btn btn-dark print-none w-100">
                                         Print
                                     </button>
-                                    
+
                                 </div>
-                            </div> 
+                            </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <h3>Preparation instructions</h3>                
+                                    <h3>Preparation instructions</h3>
                                     <p class="text-justify" id="recipe-description"></p>
                                 </div>
-                            </div>  
+                            </div>
                             <div id="recipe-image-row" class="row print-none d-none">
                                 <div class="col-12">
-                                    <h3>Gallery</h3> 
+                                    <h3>Gallery</h3>
                                 </div>
                                 <div class="col-12 col-md-10 col-lg-9">
                                     <div class="carousel slide" id="recipe-gallery" data-interval="3000">
@@ -120,7 +130,7 @@
 
                                         </div>
                                         <a class="carousel-control-prev" href="#recipe-gallery" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon"></span> 
+                                            <span class="carousel-control-prev-icon"></span>
                                           </a>
                                           <a class="carousel-control-next" href="#recipe-gallery" role="button" data-slide="next">
                                             <span class="carousel-control-next-icon"></span>
@@ -130,15 +140,15 @@
                             </div>
                             <div id="recipe-video-row" class="row print-none d-none">
                                 <div class="col-12">
-                                    <h3>Video</h3> 
+                                    <h3>Video</h3>
                                 </div>
-                                <div class="col-12 col-md-10 col-lg-9">               
+                                <div class="col-12 col-md-10 col-lg-9">
                                     <iframe
                                         sandbox="allow-scripts allow-same-origin"
                                         class="w-100"
                                         id="recipe-video-embed"
                                         frameborder="0"
-                                        src="" 
+                                        src=""
                                     ></iframe>
                                 </div>
                             </div>
@@ -147,7 +157,7 @@
                                     <h3>Make a comment and review</h3>
                                 </div>
                             </div>
-                            
+
                             <div id="comment-and-review" class="d-none">
                                 <div class="row">
                                     <div class="col-12">
@@ -160,9 +170,9 @@
                                     </div>
                                 </div>
                                 <div class="row justify-content-between justify-content-md-start">
-                                    
+
                                     <label class="pr-0 col-5 col-md-3 col-form-label recipe-info-data" for="review-mark">Choose mark (1-5):</label>
-                                    
+
                                     <div class="col-3 col-md-2 pl-0">
                                         <select id="review-mark" class="form-control">
                                             <option value="0"></option>
@@ -180,15 +190,15 @@
                                             Make a review
                                         </button>
                                     </div>
-                                </div>                                                       
-                                
-                                
+                                </div>
+
+
                                 <div class="row">
                                     <div class="col-12"><h4>Comment</h4></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <textarea 
+                                        <textarea
                                             id="comment-text-area"
                                             class="form-control"
                                             placeholder="Comment"
@@ -203,49 +213,48 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div id="cannot-comment-and-review" class="row d-none">
                                 <div class="col-12 recipe-info-data">
                                     <p>In order to make a comment and ocenu you need to be logged in</p>
                                 </div>
                             </div>
-                                             
+
                             <div class="row comment-section">
                                 <div class="col-12">
                                     <h3>Comments</h3>
                                 </div>
                             </div>
                             <div id="recipe-comments">
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 offset-lg-1 col-6 ads ads-recipe-page print-none">
                         <a target="_blank" href="https://planetasport.rs/">
                             <img src="../../slike/baneri/planeta.jpg" class="img-fluid baner">
-                            
-                        </a>                     
+
+                        </a>
                         <a target="_blank" href="https://www.beogradnocu.com/">
                             <img src="../../slike/baneri/bgnocu.png" class="img-fluid baner">
                         </a>
                         <a target="_blank" href="https://www.imlek.rs/">
-                            <img src="../../slike/baneri/imlek.jpg" class="img-fluid baner">                            
-                        </a> 
+                            <img src="../../slike/baneri/imlek.jpg" class="img-fluid baner">
+                        </a>
                     </div>
                     <!---->
                 </div>
-            </div>           
+            </div>
         </div>
-        <!-- footer -->     
+        <!-- footer -->
         <div class="row footer">
             <div class="col">
                 <p id="autori" class="p-0 m-0 mt-4">Sreten Živković 0008/2018, Slobodan Katanić 0133/2018</p><br>
-                <p id="fakultet" class="p-0 m-0">Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
-                    Univerziteta u Beogradu</p><br>
+                <p id="fakultet" class="p-0 m-0">Department of Software Engineering University of Belgrade School of Electrical Engineering</p><br>
                 <p class="p-0 m-0 mb-3">© Copyright 2021</p>
             </div>
         </div>
-        <!-- footer -->     
+        <!-- footer -->
     </div>
 </body>
 </html>

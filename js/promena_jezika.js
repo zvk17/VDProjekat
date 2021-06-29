@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
     $("#srpski").click(function() {
-        if (LANGUAGE != "sr") {
+        if (messages.LANGUAGE != "sr") {
             let url = window.location.href;
             let index = url.indexOf("/html/en/");
             if (index != -1) {
-                url.replace("/html/en/", "/html/sr/");
+                url = url.replace("/html/en/", "/html/sr/");
             } else {
                 url = url.replace("index_en.html", "index.html");
             }
@@ -14,11 +14,11 @@ $(document).ready(function () {
     });
 
     $("#engleski").click(function() {
-        if (LANGUAGE != "en") {
+        if (messages.LANGUAGE != "en") {
             let url = window.location.href;
             let index = url.indexOf("/html/sr/");
             if (index != -1) {
-                url.replace("/html/sr/", "/html/en/");
+                url = url.replace("/html/sr/", "/html/en/");
             } else {
                 url = url.replace("index.html", "index_en.html");
             }

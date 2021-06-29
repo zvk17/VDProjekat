@@ -18,6 +18,7 @@
     <script src="../../js/Recipe.js"></script>
     <script src="../../js/korisnici.js"></script>
     <script src="../../js/recipe-list.js"></script>
+    <script src="../../js/promena_jezika.js"></script>
 </head>
 <body>
     <div class="container-fluid p-0 overflow-hidden">
@@ -25,39 +26,48 @@
             <div class="col header">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
-                        <a class="navbar-brand" href="../../index.html"><img class="logo img-fluid" src="../../slike/logo/logo3.png" alt=""></a>
+                        <a class="navbar-brand" href="../../index_en.html"><img class="logo img-fluid" src="../../slike/logo/logo3.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarResponsive">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../../index.html">Početna
+                                    <a class="nav-link" href="../../index_en.html">Home
                                         <span class="sr-only">(current)</span>
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown active">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                                        Recepti
+                                        Recipes
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="predjela.html">Predjelo</a>
-                                        <a class="dropdown-item" href="glavnajela.html">Glavno jelo</a>
-                                        <a class="dropdown-item" href="deserti.html">Desert</a>
-                                        <a class="dropdown-item" href="uzine.html">Užina</a>
+                                        <a class="dropdown-item" href="predjela.html">Аppetizer</a>
+                                        <a class="dropdown-item" href="glavnajela.html">Main course</a>
+                                        <a class="dropdown-item" href="deserti.html">Dessert</a>
+                                        <a class="dropdown-item" href="uzine.html">Snack</a>
                                     </div>
                                 </li>
                                 <li id="dodaj-recept" class="nav-item">
-                                    <a class="nav-link" href="dodaj_novi_recept.html">Dodaj recept</a>
+                                    <a class="nav-link" href="dodaj_novi_recept.html">Add new recipe</a>
                                 </li>
                                 <li id="moj-nalog" class="nav-item">
-                                    <a class="nav-link" href="moj_nalog.html">Moj nalog</a>
+                                    <a class="nav-link" href="moj_nalog.html">My profile</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">O nama</a>
+                                    <a class="nav-link" href="o_nama.html">About</a>
                                 </li>
                                 <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
-                                    <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
+                                    <a id="odjava" class="nav-link" href="prijava.html">Log out</a>
+                                </li>
+                                <li class="nav-item dropdown ml-lg-5 ml-md-0">
+                                    <a class="nav-link dropdown-toggle" href="#" id="jezik" role="button" data-toggle="dropdown">
+                                        English
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="jezik">
+                                        <a id="srpski" class="dropdown-item" href="#">Srpski</a>
+                                        <a id="engleski" class="dropdown-item" href="#">English</a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -126,8 +136,7 @@
         <div class="row footer">
             <div class="col">
                 <p id="autori" class="p-0 m-0 mt-4">Sreten Živković 0008/2018, Slobodan Katanić 0133/2018</p><br>
-                <p id="fakultet" class="p-0 m-0">Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
-                    Univerziteta u Beogradu</p><br>
+                <p id="fakultet" class="p-0 m-0">Department of Software Engineering University of Belgrade School of Electrical Engineering</p><br>
                 <p class="p-0 m-0 mb-3">© Copyright 2021</p>
             </div>
         </div>

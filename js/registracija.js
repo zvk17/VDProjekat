@@ -1,11 +1,11 @@
 $(document).ready(function() {
     let korisnici = ucitajKorisnike();
 
-    resetujGreske();    
-    dodajDogadjaje();        
+    resetujGreske();
+    dodajDogadjaje();
 
     function dodajDogadjaje() {
-        $("#registracija").click(registrujSe);        
+        $("#registracija").click(registrujSe);
     }
 
     function resetujGreske() {
@@ -27,7 +27,7 @@ $(document).ready(function() {
         let lozinkaGreska = null;
         let imeGreska = null;
         let prezimeGreska = null;
-        
+
         if (korisnickoIme.length == 0) {
             korisnickoGreska = messages.LOGIN_USERNAME_REQUIRED;
         }
@@ -75,18 +75,18 @@ $(document).ready(function() {
             $("#lozinkaGreska").show();
         } else {
             let pronadjenKorisnik = null;
-            for (let i = 0; i < korisnici.length; i++) {            
+            for (let i = 0; i < korisnici.length; i++) {
                 if (korisnici[i].korisnickoIme == korisnickoIme) {
                     pronadjenKorisnik = korisnici[i];
                     break;
                 }
-            }        
+            }
             if (pronadjenKorisnik != null) {
                 $("#korisnickoImeGreska").text(messages.REGISTER_USERNAME_UNIQUE);
                 $("#korisnickoImeGreska").show();
             } else {
                 let novId = korisnici[korisnici.length - 1].id + 1;
-                let noviKorisnik = {                    
+                let noviKorisnik = {
                     ime: ime,
                     prezime: prezime,
                     korisnickoIme: korisnickoIme,
@@ -97,8 +97,8 @@ $(document).ready(function() {
 
                 localStorage.setItem("korisnici", JSON.stringify(korisnici));
                 localStorage.setItem('tekuciKorisnik', JSON.stringify(noviKorisnik));
-                
-                window.location.href = "../../index.html";
+
+                window.location.href = "../../" + messages.HOME_PAGE;
             }
         }
 

@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/bootstrap.css">
-    <script src="../../js/jquery-3.6.0.js"></script>        
-    <script src="../../js/bootstrap.js"></script>    
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/bootstrap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/stil.css">
     <script src="../../js/generisanje_slike.js"></script>
     <script src="../../js/messages.sr.js"></script>
     <script src="../../js/navigacija.js"></script>
     <link rel="stylesheet" href="../../css/stil.css">
-    <script src="../../js/Recipe.js"></script>    
+    <script src="../../js/Recipe.js"></script>
     <script src="../../js/moj_nalog.js"></script>
+    <script src="../../js/promena_jezika.js"></script>
     <title>Kulinarstvo.com - Moj nalog</title>
 </head>
 <body>
@@ -53,32 +54,41 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="o_nama.html">O nama</a>
-                                </li>                                
+                                </li>
                                 <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
                                     <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
-                                </li>                
+                                </li>
+                                <li class="nav-item dropdown ml-lg-5 ml-md-0">
+                                    <a class="nav-link dropdown-toggle" href="#" id="jezik" role="button" data-toggle="dropdown">
+                                        Srpski
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="jezik">
+                                        <a id="srpski" class="dropdown-item" href="#">Srpski</a>
+                                        <a id="engleski" class="dropdown-item" href="#">English</a>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>                        
+                        </div>
                     </div>
                 </nav>
             </div>
         </div>
         <div class="row pl-lg-5 pr-lg-5 pl-md-2 pr-md-2 mt-5">
-            <div class="col-lg-3 col-md-12 text-center mb-5">                
-                <h1 id="desno-ime-prezime"></h1> 
-                <h5 id="korisnicko-ime"></h5>   
-                <div id="circle-inicijali"></div>                
-            </div>    
-            <div class="col-lg-9 col-md-12 ml-lg-0 ml-5">                
+            <div class="col-lg-3 col-md-12 text-center mb-5">
+                <h1 id="desno-ime-prezime"></h1>
+                <h5 id="korisnicko-ime"></h5>
+                <div id="circle-inicijali"></div>
+            </div>
+            <div class="col-lg-9 col-md-12 ml-lg-0 ml-5">
                 <div class="row">
                     <div class="col-lg-4 col-md-12">
                         <div id="moji-recepti" class="row mr-1 mb-5">
                             <div class="col-12">
                                 <h2>Recepti</h2>
-                            </div>                                                                                                                                                                                                                                                            
+                            </div>
                             <!-- <div class="row bg-light p-2 mt-2 w-100">
                                 <div class="col-9">
-                                    <h5>Piletina u besamel sosu</h5>                                                                        
+                                    <h5>Piletina u besamel sosu</h5>
                                     <div>Trajanje</div>
                                     <div>Tezina</div>
                                 </div>
@@ -86,18 +96,18 @@
                                     <div class="broj-komentara bg-dark w-75">2</div>
                                     <div>
                                         <button class="btn btn-outline-dark mt-3">Obrisi</button>
-                                    </div>                                    
-                                </div>                                                                                
+                                    </div>
+                                </div>
                             </div>                             -->
-                        </div>                                        
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div id="moje-ocene" class="row mr-1 mb-5">
                             <div class="col-12">
                                 <h2>Ocene</h2>
-                            </div>         
+                            </div>
                             <div id="ocene-kolone" class="row w-100">
-                                <!-- <div class="col-12">    
+                                <!-- <div class="col-12">
                                     <h5>Piletina u besamel sosu</h5>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -105,22 +115,22 @@
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
                                 </div> -->
-                            </div>                                               
+                            </div>
                         </div>
-                    </div>             
+                    </div>
                     <div class="col-lg-4 col-md-12">
                         <div id="moji-komentari" class="row">
                             <div class="col-12">
-                                <h2>Komentari</h2>                                
-                            </div>                
+                                <h2>Komentari</h2>
+                            </div>
                             <div id="komentari-red" class="row mt-2 w-100">
                                 <!-- <div class="col-12">
                                     <h5>Piletina</h5>
                                     <div>Komenar je ovo ovde.</div>
                                 </div>             -->
-                            </div>                                                        
+                            </div>
                         </div>
-                    </div>             
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,10 +141,10 @@
                     Univerziteta u Beogradu</p><br>
                 <p class="p-0 m-0 mb-3">© Copyright 2021</p>
             </div>
-        </div>    
+        </div>
         <!-- <div class="row d-flex justify-content-end mt-5">
             <div class="col-xs-12 col-md-4 desno">
-                <h1 id="desno-ime-prezime"></h1>                
+                <h1 id="desno-ime-prezime"></h1>
                 <div id="circle-inicijali"></div>
             </div>
         </div>         -->

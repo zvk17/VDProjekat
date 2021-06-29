@@ -12,14 +12,14 @@ $(document).ready(function() {
 
     function popuniRecepte() {
         for (let i = 0; i < recepti.length; i++) {
-            if (recepti[i].idUser == korisnik.id) {                
+            if (recepti[i].idUser == korisnik.id) {
                 let prosek = prosecnaOcena(recepti[i].reviews);
 
                 let red = $("<div>").attr("class", "row bg-light p-2 mt-2 w-100").attr("id", "r" + recepti[i].id);
 
                 let podaci = $("<div>").attr("class", "col-xl-9 col-lg-12 col-md-9");
-                let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);                            
-                let naziv = $("<h5>").text(recepti[i].name);                
+                let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);
+                let naziv = $("<h5>").text(recepti[i].name);
                 let tezina = $("<div>").text(messages.HARDNESS_LEVEL + recepti[i].level);
                 let ocena = $("<div>").text(messages.AVERAGE_REVIEW + prosek);
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
                 let brojKomentara = $("<div>").attr("class", "broj-komentara bg-dark w-75").text(recepti[i].comments.length);
                 let obrisi = $("<div>").append(
                     $("<button>").attr("class", "btn btn-outline-dark mt-3 ukloni-recept").attr("id", "b-" + recepti[i].id).text(messages.DELETE)
-                );                                
+                );
 
                 komentari.append(brojKomentara);
                 komentari.append(obrisi);
@@ -40,9 +40,9 @@ $(document).ready(function() {
                 red.append(podaci);
                 red.append(komentari);
 
-                $("#moji-recepti").append(red);                                
+                $("#moji-recepti").append(red);
 
-                $("#b-" + recepti[i].id).click(function() {                         
+                $("#b-" + recepti[i].id).click(function() {
                     let id = $(this).attr("id").split("-")[1];
 
                     izbrisiRecept(parseInt(id));
@@ -72,23 +72,23 @@ $(document).ready(function() {
                 }
 
                 break;
-            }                        
-        }        
+            }
+        }
     }
 
     function popuniOcene() {
-        for (let i = 0; i < recepti.length; i++) {                                    
-            for (let j = 0; j < recepti[i].reviews.length; j++) {                                                
-                if (recepti[i].reviews[j].idUser == korisnik.id) {                    
+        for (let i = 0; i < recepti.length; i++) {
+            for (let j = 0; j < recepti[i].reviews.length; j++) {
+                if (recepti[i].reviews[j].idUser == korisnik.id) {
                     let kolona = $("<div>").attr("class", "col-12 bg-light p-2 mt-2");
-                    let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);                            
-                    let naziv = $("<h5>").text(recepti[i].name);                    
+                    let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);
+                    let naziv = $("<h5>").text(recepti[i].name);
 
                     let zvezdice = [];
                     let ocena = recepti[i].reviews[j].mark;
                     for (let k = 0; k < ocena; k++) {
                         zvezdice.push($("<span>").attr("class", "fa fa-star"));
-                    }                                        
+                    }
 
                     link.append(naziv);
                     kolona.append(link);
@@ -105,13 +105,13 @@ $(document).ready(function() {
     }
 
     function popuniKomentare() {
-        for (let i = 0; i < recepti.length; i++) {                                    
-            for (let j = 0; j < recepti[i].comments.length; j++) {                     
+        for (let i = 0; i < recepti.length; i++) {
+            for (let j = 0; j < recepti[i].comments.length; j++) {
                 if (korisnik.id == recepti[i].comments[j].idUser) {
                     let red = $("<div>").attr("class", "col-12 bg-light mb-2 p-2");
 
-                    let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);                            
-                    let naziv = $("<h5>").text(recepti[i].name);                    
+                    let link = $("<a>").addClass("recept-link").attr("href", messages.RECIPE_PAGE + "?id=" + recepti[i].id);
+                    let naziv = $("<h5>").text(recepti[i].name);
 
                     let komentar = $("<div>").text(recepti[i].comments[j].text);
 
@@ -124,7 +124,7 @@ $(document).ready(function() {
             }
         }
     }
- 
+
     function prosecnaOcena(recept) {
         let prosek = 0.0;
         for (let i = 0; i < recept.length; i++) {

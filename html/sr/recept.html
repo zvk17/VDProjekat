@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/stil.css" />
     <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/bootstrap.js"></script>    
+    <script src="../../js/bootstrap.js"></script>
     <script src="../../js/messages.sr.js"></script>
     <script src="../../js/generisanje_slike.js"></script>
     <script src="../../js/Recipe.js"></script>
     <script src="../../js/korisnici.js"></script>
     <script src="../../js/recipe-page.js"></script>
     <script src="../../js/navigacija.js"></script>
+    <script src="../../js/promena_jezika.js"></script>
 </head>
 <body>
     <div class="container-fluid p-0 overflow-hidden">
@@ -51,13 +52,22 @@
                                     <a class="nav-link" href="moj_nalog.html">Moj nalog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">O nama</a>
-                                </li>                                
+                                    <a class="nav-link" href="o_nama.html">O nama</a>
+                                </li>
                                 <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
                                     <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
-                                </li>                
+                                </li>
+                                <li class="nav-item dropdown ml-lg-5 ml-md-0">
+                                    <a class="nav-link dropdown-toggle" href="#" id="jezik" role="button" data-toggle="dropdown">
+                                        Srpski
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="jezik">
+                                        <a id="srpski" class="dropdown-item" href="#">Srpski</a>
+                                        <a id="engleski" class="dropdown-item" href="#">English</a>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>                        
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -66,34 +76,34 @@
             <div class="col-11 col-lg-10 col-md-10">
                 <div class="row d-flex justify-content-md-between justify-content-center">
                     <!---->
-                    <div class="col-lg-9 col-12">                
-                        <div id="recipe-view">                    
+                    <div class="col-lg-9 col-12">
+                        <div id="recipe-view">
                             <div class="row print-none mt-3">
                                 <div class="col-12">
-                                    <a class="recipe-link" href="../../index.html">Početna</a> 
-                                    > 
-                                    <a class="recipe-link" href="#" id="recipe-type-breadcrumb" >Tip jela</a> 
-                                    > 
+                                    <a class="recipe-link" href="../../index.html">Početna</a>
+                                    >
+                                    <a class="recipe-link" href="#" id="recipe-type-breadcrumb" >Tip jela</a>
+                                    >
                                     <span class="recipe-name"></span>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-12">
                                     <h1 class="recipe-name" class="text-center"></h1>
                                 </div>
                             </div>
-                            
+
                             <div class="row d-flex justify-content-md-between">
-                                <div class="col-12 col-md-5 recipe-info-data">                
+                                <div class="col-12 col-md-5 recipe-info-data">
                                     <p id="recipe-author">
-                                        
+
                                     </p>
-                                    <p>Vreme pripreme: 
+                                    <p>Vreme pripreme:
                                         <span id="recipe-duration"></span>
                                     </p>
                                     <p id="recipe-average-review">
-                    
+
                                     </p>
                                 </div>
                                 <div class="col-12 col-md-3 col-lg-2">
@@ -102,18 +112,18 @@
                                         class="btn btn-dark print-none w-100">
                                         Odštampaj
                                     </button>
-                                    
+
                                 </div>
-                            </div> 
+                            </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <h3>Uputstvo za pripremu</h3>                
+                                    <h3>Uputstvo za pripremu</h3>
                                     <p class="text-justify" id="recipe-description"></p>
                                 </div>
                             </div>
                             <div id="recipe-image-row" class="row print-none d-none">
                                 <div class="col-12">
-                                    <h3>Galerija</h3> 
+                                    <h3>Galerija</h3>
                                 </div>
                                 <div class="col-12 col-md-10 col-lg-9">
                                     <div class="carousel slide" id="recipe-gallery" data-interval="3000">
@@ -121,7 +131,7 @@
 
                                         </div>
                                         <a class="carousel-control-prev" href="#recipe-gallery" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon"></span> 
+                                            <span class="carousel-control-prev-icon"></span>
                                           </a>
                                           <a class="carousel-control-next" href="#recipe-gallery" role="button" data-slide="next">
                                             <span class="carousel-control-next-icon"></span>
@@ -131,24 +141,24 @@
                             </div>
                             <div id="recipe-video-row" class="row print-none d-none">
                                 <div class="col-12">
-                                    <h3>Video</h3> 
+                                    <h3>Video</h3>
                                 </div>
-                                <div class="col-12 col-md-10 col-lg-9">               
+                                <div class="col-12 col-md-10 col-lg-9">
                                     <iframe
                                         sandbox="allow-scripts allow-same-origin"
                                         class="w-100"
                                         id="recipe-video-embed"
                                         frameborder="0"
-                                        src="" 
+                                        src=""
                                     ></iframe>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="row comment-section">
                                 <div class="col-12">
                                     <h3>Ostavite komentar i ocenu</h3>
                                 </div>
                             </div>
-                            
+
                             <div id="comment-and-review" class="d-none">
                                 <div class="row">
                                     <div class="col-12">
@@ -161,9 +171,9 @@
                                     </div>
                                 </div>
                                 <div class="row justify-content-between justify-content-md-start">
-                                    
+
                                     <label class="pr-0 col-5 col-md-3 col-form-label recipe-info-data" for="review-mark">Unesite ocenu (1-5):</label>
-                                    
+
                                     <div class="col-3 col-md-2 pl-0">
                                         <select id="review-mark" class="form-control">
                                             <option value="0"></option>
@@ -181,15 +191,15 @@
                                             Oceni
                                         </button>
                                     </div>
-                                </div>                                                       
-                                
-                                
+                                </div>
+
+
                                 <div class="row">
                                     <div class="col-12"><h4>Komentar</h4></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <textarea 
+                                        <textarea
                                             id="comment-text-area"
                                             class="form-control"
                                             placeholder="Komentar"                                class="form-control"
@@ -203,40 +213,40 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div id="cannot-comment-and-review" class="row d-none">
                                 <div class="col-12 recipe-info-data">
                                     <p>Da biste ostavili komentar i ocenu morate biti prijavljeni</p>
                                 </div>
                             </div>
-                                             
+
                             <div class="row comment-section">
                                 <div class="col-12">
                                     <h3>Komentari</h3>
                                 </div>
                             </div>
                             <div id="recipe-comments">
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 offset-lg-1 col-6 ads ads-recipe-page print-none">
                         <a target="_blank" href="https://planetasport.rs/">
                             <img src="../../slike/baneri/planeta.jpg" class="img-fluid baner">
-                            
-                        </a>                     
+
+                        </a>
                         <a target="_blank" href="https://www.beogradnocu.com/">
                             <img src="../../slike/baneri/bgnocu.png" class="img-fluid baner">
                         </a>
                         <a target="_blank" href="https://www.imlek.rs/">
-                            <img src="../../slike/baneri/imlek.jpg" class="img-fluid baner">                            
-                        </a> 
+                            <img src="../../slike/baneri/imlek.jpg" class="img-fluid baner">
+                        </a>
                     </div>
                     <!---->
                 </div>
-            </div>           
+            </div>
         </div>
-        <!-- footer -->     
+        <!-- footer -->
         <div class="row footer">
             <div class="col">
                 <p id="autori" class="p-0 m-0 mt-4">Sreten Živković 0008/2018, Slobodan Katanić 0133/2018</p><br>
@@ -245,7 +255,7 @@
                 <p class="p-0 m-0 mb-3">© Copyright 2021</p>
             </div>
         </div>
-        <!-- footer -->     
+        <!-- footer -->
     </div>
 </body>
 </html>

@@ -37,5 +37,6 @@ window.messages = {
     REGISTER_LASTNAME_ALPHA: "Lastname can only contain alphabets.",
     REGISTER_USERNAME_ALPHA: "Username can only contain alphabets.",
     DELETE: "Delete",
-    MARK: "Review: "
+    MARK: "Review: ",
+    HOME_PAGE: "index_en.html"
 };

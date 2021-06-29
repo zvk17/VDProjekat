@@ -1,7 +1,7 @@
 window.messages = {
     LANGUAGE: "sr",
     HARDNESS_LEVEL: "Nivo težine: ",
-    AVERAGE_REVIEW: "Prosečna ocena: ",    
+    AVERAGE_REVIEW: "Prosečna ocena: ",
     MIN_NAME_LENGTH: "Minimalna dužina naslova je 5 znaka.",
     DESCRIPTION_REQUIRED: "Potrebno je uneti uputstvo za recept",
     DURATION_REQUIRED: "Obavezno je uneti duzinu spremanja jela",
@@ -37,5 +37,6 @@ window.messages = {
     REGISTER_LASTNAME_ALPHA: "Prezime se sastoji samo od slova.",
     REGISTER_USERNAME_ALPHA: "Korisničko ime se sastoji samo od slova.",
     DELETE: "Obriši",
-    MARK: "Ocena: "
+    MARK: "Ocena: ",
+    HOME_PAGE: "index.html"
 };

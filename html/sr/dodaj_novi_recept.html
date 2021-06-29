@@ -12,6 +12,7 @@
     <script src="../../js/bootstrap.js"></script>
     <script src="../../js/Recipe.js"></script>
     <script src="../../js/add-recipe.js"></script>
+    <script src="../../js/promena_jezika.js"></script>
     <link rel="stylesheet" href="../../css/stil.css">
 </head>
 <body>
@@ -49,25 +50,34 @@
                                     <a class="nav-link" href="moj_nalog.html">Moj nalog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">O nama</a>
-                                </li>                                
+                                    <a class="nav-link" href="o_nama.html">O nama</a>
+                                </li>
                                 <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
                                     <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
-                                </li>                
+                                </li>
+                                <li class="nav-item dropdown ml-lg-5 ml-md-0">
+                                    <a class="nav-link dropdown-toggle" href="#" id="jezik" role="button" data-toggle="dropdown">
+                                        Srpski
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="jezik">
+                                        <a id="srpski" class="dropdown-item" href="#">Srpski</a>
+                                        <a id="engleski" class="dropdown-item" href="#">English</a>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>                        
+                        </div>
                     </div>
                 </nav>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-12 col-md-8 col-lg-5">                
+            <div class="col-12 col-md-8 col-lg-5">
 
                 <div class="row">
                     <div class="col-12">
                         <h1 class="text-center">Dodaj recept</h1>
-                    </div>                        
-                </div> 
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <label for="dish-name" class="col-sm-5 col-form-label">Ime jela:</label>
                     <div class="col-sm-7">
@@ -82,7 +92,7 @@
                             <option value="P" selected>Predjelo</option>
                             <option value="G">Glavno jelo</option>
                             <option value="D">Desert</option>
-                            <option value="U" >Užina</option>                            
+                            <option value="U" >Užina</option>
                         </select>
                     </div>
                 </div>
@@ -94,17 +104,17 @@
                             <option value="1" selected>1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="4">4</option>   
-                            <option value="5">5</option>                           
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
-                </div> 
+                </div>
                 <div class="row mb-3">
                     <div class="col-12">
                         <label for="dish-description" class="form-label">Uputstvo za pripremu:</label>
                         <textarea class="form-control" id="dish-description" rows="3"></textarea>
-                    </div>                    
-                </div> 
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <label for="dish-duration" class="col-sm-5 col-form-label">Trajanje pripreme:</label>
                     <div class="col-sm-7">
@@ -114,16 +124,16 @@
                 <div class="row mb-3">
                     <div class="col-12">
                         <div class="d-none text-danger  text-center" id="dish-error">Nisu uneta sva polja</div>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="row mb-3 text-center">
                     <div class="col-12">
                         <button id="dish-submit" class="btn btn-dark">Dodaj recept</button>
-                    </div>                    
+                    </div>
                 </div>
-            </div>            
+            </div>
         </div>
-        <!-- footer -->     
+        <!-- footer -->
         <div class="row footer">
             <div class="col">
                 <p id="autori" class="p-0 m-0 mt-4">Sreten Živković 0008/2018, Slobodan Katanić 0133/2018</p><br>
@@ -132,7 +142,7 @@
                 <p class="p-0 m-0 mb-3">© Copyright 2021</p>
             </div>
         </div>
-        <!-- footer --> 
+        <!-- footer -->
     </div>
 </body>
 </html>

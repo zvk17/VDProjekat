@@ -12,6 +12,7 @@
     <script src="../../js/bootstrap.js"></script>
     <script src="../../js/Recipe.js"></script>
     <script src="../../js/add-recipe.js"></script>
+    <script src="../../js/promena_jezika.js"></script>
     <link rel="stylesheet" href="../../css/stil.css">
 </head>
 <body>
@@ -20,54 +21,63 @@
             <div class="col header">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
-                        <a class="navbar-brand" href="../../index.html"><img class="logo img-fluid" src="../../slike/logo/logo3.png" alt=""></a>
+                        <a class="navbar-brand" href="../../index_en.html"><img class="logo img-fluid" src="../../slike/logo/logo3.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarResponsive">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../../index.html">Početna
+                                    <a class="nav-link" href="../../index_en.html">Početna
                                         <!-- <span class="sr-only">(current)</span> -->
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                                        Recepti
+                                        Recipes
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="predjela.html">Predjelo</a>
-                                        <a class="dropdown-item" href="glavnajela.html">Glavno jelo</a>
-                                        <a class="dropdown-item" href="deserti.html">Desert</a>
-                                        <a class="dropdown-item" href="uzine.html">Užina</a>
+                                        <a class="dropdown-item" href="predjela.html">Аppetizer</a>
+                                        <a class="dropdown-item" href="glavnajela.html">Main course</a>
+                                        <a class="dropdown-item" href="deserti.html">Dessert</a>
+                                        <a class="dropdown-item" href="uzine.html">Snack</a>
                                     </div>
                                 </li>
                                 <li id="dodaj-recept" class="nav-item active">
-                                    <a class="nav-link" href="dodaj_novi_recept.html">Dodaj recept</a>
+                                    <a class="nav-link" href="dodaj_novi_recept.html">Add new recipe</a>
                                 </li>
                                 <li id="moj-nalog" class="nav-item">
-                                    <a class="nav-link" href="moj_nalog.html">Moj nalog</a>
+                                    <a class="nav-link" href="moj_nalog.html">My profile</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">O nama</a>
-                                </li>                                
+                                    <a class="nav-link" href="o_nama.html">About</a>
+                                </li>
                                 <li id="odjava-stavka" class="nav-item ml-lg-5 ml-md-0">
-                                    <a id="odjava" class="nav-link" href="prijava.html">Odjavi se</a>
-                                </li>                
+                                    <a id="odjava" class="nav-link" href="prijava.html">Log out</a>
+                                </li>
+                                <li class="nav-item dropdown ml-lg-5 ml-md-0">
+                                    <a class="nav-link dropdown-toggle" href="#" id="jezik" role="button" data-toggle="dropdown">
+                                        English
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="jezik">
+                                        <a id="srpski" class="dropdown-item" href="#">Srpski</a>
+                                        <a id="engleski" class="dropdown-item" href="#">English</a>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>                        
+                        </div>
                     </div>
                 </nav>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-12 col-md-8 col-lg-5">                
+            <div class="col-12 col-md-8 col-lg-5">
 
                 <div class="row">
                     <div class="col-12">
                         <h1 class="text-center">Add recipe</h1>
-                    </div>                        
-                </div> 
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <label for="dish-name" class="col-sm-5 col-form-label">Dish name:</label>
                     <div class="col-sm-7">
@@ -82,7 +92,7 @@
                             <option value="P" selected>Appertizer</option>
                             <option value="G">Main course</option>
                             <option value="D">Dessert</option>
-                            <option value="U" >Snack</option>                            
+                            <option value="U" >Snack</option>
                         </select>
                     </div>
                 </div>
@@ -94,17 +104,17 @@
                             <option value="1" selected>1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="4">4</option>   
-                            <option value="5">5</option>                           
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
-                </div> 
+                </div>
                 <div class="row mb-3">
                     <div class="col-12">
                         <label for="dish-description" class="form-label">Preparation instructions:</label>
                         <textarea class="form-control" id="dish-description" rows="3"></textarea>
-                    </div>                    
-                </div> 
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <label for="dish-duration" class="col-sm-5 col-form-label">Preparation time:</label>
                     <div class="col-sm-7">
@@ -114,25 +124,24 @@
                 <div class="row mb-3">
                     <div class="col-12">
                         <div class="d-none text-danger text-center" id="dish-error">All fields must be filled</div>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="row mb-3 text-center">
                     <div class="col-12">
                         <button id="dish-submit" class="btn btn-dark">Add recipe</button>
-                    </div>                    
+                    </div>
                 </div>
-            </div>            
+            </div>
         </div>
-        <!-- footer -->     
+        <!-- footer -->
         <div class="row footer">
             <div class="col">
                 <p id="autori" class="p-0 m-0 mt-4">Sreten Živković 0008/2018, Slobodan Katanić 0133/2018</p><br>
-                <p id="fakultet" class="p-0 m-0">Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
-                    Univerziteta u Beogradu</p><br>
+                <p id="fakultet" class="p-0 m-0">Department of Software Engineering University of Belgrade School of Electrical Engineering</p><br>
                 <p class="p-0 m-0 mb-3">© Copyright 2021</p>
             </div>
         </div>
-        <!-- footer --> 
+        <!-- footer -->
     </div>
 </body>
 </html>
