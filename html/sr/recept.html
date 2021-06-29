@@ -109,7 +109,39 @@
                                     <h3>Uputstvo za pripremu</h3>                
                                     <p class="text-justify" id="recipe-description"></p>
                                 </div>
-                            </div>  
+                            </div>
+                            <div id="recipe-image-row" class="row print-none d-none">
+                                <div class="col-12">
+                                    <h3>Galerija</h3> 
+                                </div>
+                                <div class="col-12 col-md-10 col-lg-9">
+                                    <div class="carousel slide" id="recipe-gallery" data-interval="3000">
+                                        <div id="recipe-gallery-list" class="carousel-inner">
+
+                                        </div>
+                                        <a class="carousel-control-prev" href="#recipe-gallery" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span> 
+                                          </a>
+                                          <a class="carousel-control-next" href="#recipe-gallery" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                          </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="recipe-video-row" class="row print-none d-none">
+                                <div class="col-12">
+                                    <h3>Video</h3> 
+                                </div>
+                                <div class="col-12 col-md-10 col-lg-9">               
+                                    <iframe
+                                        sandbox="allow-scripts allow-same-origin"
+                                        class="w-100"
+                                        id="recipe-video-embed"
+                                        frameborder="0"
+                                        src="" 
+                                    ></iframe>
+                                </div>
+                            </div> 
                             <div class="row comment-section">
                                 <div class="col-12">
                                     <h3>Ostavite komentar i ocenu</h3>

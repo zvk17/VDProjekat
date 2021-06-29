@@ -117,6 +117,8 @@ function loadOrInitRecipes() {
                 type: "D",
                 level: 3,
                 idUser: 1,
+                images: ["tiramisu1.jpg", "tiramisu2.jpg", "tiramisu3.jpg"],
+                videos: ["https://www.youtube.com/embed/RfTXCpwS9To"],
                 comments: [
                     {
                         idUser: 4,

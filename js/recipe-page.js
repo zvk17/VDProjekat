@@ -1,3 +1,4 @@
+const CAROUSEL_INTERVAL = 1500;
 let recipes = loadOrInitRecipes();
 let users = ucitajKorisnike();
 let recipeId = getRecipeId();
@@ -54,6 +55,23 @@ function getRecipeId() {
         return parseInt(id);
     }
     return -1;
+}
+function galleryItem(imageLink) {
+    let link = "../../slike/galerija/" + imageLink;
+    /*
+    <div id="prvi-slajd" class="carousel-item active">                                                      
+        <a id="l1" href=""><img id="img-r1" class="w-100 d-block img-fluid recept-slika" alt="Second slide"></a>
+        <div class="carousel-caption">
+            <h2 id="rh1"></h2>
+            <p id="rp1"></p>
+        </div>    
+    </div>
+    */ 
+   let $div = $("<div>").addClass("carousel-item recipe-gallery-item");
+   let $img = $("<img>").addClass("w-100 d-block img-fluid");
+   $img.attr("src", link);
+   $div.append($img);
+   return $div;
 }
 function commentItem(comment) {
     let user = users.find(user => user.id == comment.idUser);
@@ -142,18 +160,22 @@ $(document).ready(()=>{
     let $cannotCommentAndReview = $("#cannot-comment-and-review")
     let $commentTextArea = $("#comment-text-area");
     let $commentButton = $("#comment-add-button");
-    //let $averageReview = $("#recipe-average-review");
     let $reviewMark = $("#review-mark");
     let $makeReviewButton = $("#make-review-button");
     let $pagePrintButton = $("#page-print-button");
     let $recipeTypeBreadcrumb = $("#recipe-type-breadcrumb");
+    let $recipeVideoRow = $("#recipe-video-row");
+    let $recipeVideoEmbed = $("#recipe-video-embed");
+    let $recipeImageRow = $("#recipe-image-row");
+    let $recipeGallery = $("#recipe-gallery");
+    let $recipeGalleryList = $("#recipe-gallery-list");
 
     $recipeName.text(currentRecipe.name);
     $pageTitle.text(messages.SITE_NAME + " - " + currentRecipe.name);
     $recipeDescription.text(currentRecipe.description);
     $recipeDuration.text(currentRecipe.duration);
     $recipeAuthor.text(messages.AUTHOR + author.ime + " " + author.prezime);
-    //$averageReview.text(messages.AVERAGE_REVIEW + getReviewValue(currentRecipe));
+
 
     let mealType = getMealType(currentRecipe.type);
     $recipeTypeBreadcrumb.attr("href", mealType.link).text(mealType.text);
@@ -163,6 +185,21 @@ $(document).ready(()=>{
     } else {
         $cannotCommentAndReview.removeClass("d-none");
     }
+    if (!!currentRecipe.videos) {
+        $recipeVideoRow.removeClass("d-none");
+        $recipeVideoEmbed.attr("src", currentRecipe.videos[0]);
+    }
+    if (!!currentRecipe.images) {
+        let $list = currentRecipe.images.map(galleryItem);
+        $list[0].addClass("active");
+        $list.forEach($image => $recipeGalleryList.append($image));
+        $recipeGallery.carousel({
+            //interval: CAROUSEL_INTERVAL
+        });
+        $recipeImageRow.removeClass("d-none");
+    }
+
+
     $commentButton.on("click", ()=>{
         let comment = $commentTextArea.val();
         if (comment.length == 0) {
