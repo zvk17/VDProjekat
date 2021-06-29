@@ -1,18 +1,18 @@
 window.messages = {
     LANGUAGE: "en",
-    HARDNESS_LEVEL: "Nivo težine: ",
+    HARDNESS_LEVEL: "Level of difficulty: ",
     AVERAGE_REVIEW: "Average review: ",    
     MIN_NAME_LENGTH: "Minimalna dužina naslova je 5 znaka.",
     DESCRIPTION_REQUIRED: "Potrebno je uneti uputstvo za recept",
     DURATION_REQUIRED: "Obavezno je uneti duzinu spremanja jela",
     NOT_LOGGED_IN: "Morate biti prijavljeni da biste dodali recept",
-    AUTHOR: "Autor: ",
+    AUTHOR: "Author: ",
     RECIPE_NOT_FOUND: "Nije pronađen nijedan recept sa datim imenom",
     RECIPE_PAGE: "recept.html",
-    RECIPE_NOT_EXIST: "Dati recept ne postoji",
-    ALREADY_REVIEWED: "Već ste ocenili ovaj recept ocenom: ",
-    CHANGE_REVIEWED: "Promenite ocenu: ",
-    MAKE_REVIEW: "Ocenite recept:",
+    RECIPE_NOT_EXIST: "This recipe does not exist.",
+    ALREADY_REVIEWED: "You have already made a review with mark: ",
+    CHANGE_REVIEWED: "Change the review: ",
+    MAKE_REVIEW: "Make a review:",
     SITE_NAME: "Kulinarstvo.com",
     APPERTIZER: "Appertizer",
     MAIN_COURSE: "Main course",
@@ -37,5 +37,5 @@ window.messages = {
     REGISTER_LASTNAME_ALPHA: "Prezime se sastoji samo od slova.",
     REGISTER_USERNAME_ALPHA: "Korisničko ime se sastoji samo od slova.",
     DELETE: "Delete",
-    MARK: "Ocena: "
+    MARK: "Review: "
 };

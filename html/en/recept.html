@@ -14,7 +14,7 @@
     <script src="../../js/Recipe.js"></script>
     <script src="../../js/korisnici.js"></script>
     <script src="../../js/recipe-page.js"></script>
-</head>
+    <script src="../../js/navigacija.js"></script>
 <body>
     <div class="container-fluid p-0 overflow-hidden">
         <div class="row print-none">
@@ -69,7 +69,7 @@
                         <div id="recipe-view">                    
                             <div class="row print-none mt-3">
                                 <div class="col-12">
-                                    <a class="recipe-link" href="../../index.html">Početna</a> 
+                                    <a class="recipe-link" href="../../index.html">Home</a> 
                                     > 
                                     <a class="recipe-link" href="#" id="recipe-type-breadcrumb" >Tip jela</a> 
                                     > 
@@ -88,7 +88,7 @@
                                     <p id="recipe-author">
                                         
                                     </p>
-                                    <p>Vreme pripreme: 
+                                    <p>Preparation time: 
                                         <span id="recipe-duration"></span>
                                     </p>
                                     <p id="recipe-average-review">
@@ -106,20 +106,52 @@
                             </div> 
                             <div class="row">
                                 <div class="col-12">
-                                    <h3>Uputstvo za pripremu</h3>                
+                                    <h3>Preparation instructions</h3>                
                                     <p class="text-justify" id="recipe-description"></p>
                                 </div>
                             </div>  
+                            <div id="recipe-image-row" class="row print-none d-none">
+                                <div class="col-12">
+                                    <h3>Gallery</h3> 
+                                </div>
+                                <div class="col-12 col-md-10 col-lg-9">
+                                    <div class="carousel slide" id="recipe-gallery" data-interval="3000">
+                                        <div id="recipe-gallery-list" class="carousel-inner">
+
+                                        </div>
+                                        <a class="carousel-control-prev" href="#recipe-gallery" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span> 
+                                          </a>
+                                          <a class="carousel-control-next" href="#recipe-gallery" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                          </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="recipe-video-row" class="row print-none d-none">
+                                <div class="col-12">
+                                    <h3>Video</h3> 
+                                </div>
+                                <div class="col-12 col-md-10 col-lg-9">               
+                                    <iframe
+                                        sandbox="allow-scripts allow-same-origin"
+                                        class="w-100"
+                                        id="recipe-video-embed"
+                                        frameborder="0"
+                                        src="" 
+                                    ></iframe>
+                                </div>
+                            </div>
                             <div class="row comment-section">
                                 <div class="col-12">
-                                    <h3>Ostavite komentar i ocenu</h3>
+                                    <h3>Make a comment and review</h3>
                                 </div>
                             </div>
                             
                             <div id="comment-and-review" class="d-none">
                                 <div class="row">
                                     <div class="col-12">
-                                        <h4>Ocena</h4>
+                                        <h4>Review</h4>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -129,7 +161,7 @@
                                 </div>
                                 <div class="row justify-content-between justify-content-md-start">
                                     
-                                    <label class="pr-0 col-5 col-md-3 col-form-label recipe-info-data" for="review-mark">Unesite ocenu (1-5):</label>
+                                    <label class="pr-0 col-5 col-md-3 col-form-label recipe-info-data" for="review-mark">Choose mark (1-5):</label>
                                     
                                     <div class="col-3 col-md-2 pl-0">
                                         <select id="review-mark" class="form-control">
@@ -145,7 +177,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-3 mt-3 mb-3">
                                         <button id="make-review-button" class="w-100 btn btn-dark">
-                                            Oceni
+                                            Make a review
                                         </button>
                                     </div>
                                 </div>                                                       
@@ -159,7 +191,8 @@
                                         <textarea 
                                             id="comment-text-area"
                                             class="form-control"
-                                            placeholder="Komentar"                                class="form-control"
+                                            placeholder="Comment"
+                                            class="form-control"
                                         ></textarea>
                                     </div>
                                     <div class="col-12 col-md-5 col-lg-3">

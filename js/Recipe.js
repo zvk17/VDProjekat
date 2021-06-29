@@ -13,6 +13,7 @@ function loadOrInitRecipes() {
                 level: 4,
                 idUser: 4,
                 videos: ["https://www.youtube.com/embed/BWyX_8e0M5k"],
+                images: ["losos1.jpg", "losos2.jpg", "losos3.jpg"],
                 comments: [
                     {
                         idUser: 3,
@@ -176,6 +177,7 @@ function loadOrInitRecipes() {
                 type: "P",
                 level: 4,
                 idUser: 4,
+                images: ["rolnice1.jpg", "rolnice2.jpg", "rolnice3.jpg"],
                 comments: [],
                 reviews: [
                     {
