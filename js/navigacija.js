@@ -4,13 +4,13 @@ $(document).ready(function() {
     sakrijLogout();
 
     function odjaviSe() {
-        $("#odjava").click(function() {                        
+        $("#odjava").click(function() {
             localStorage.removeItem("tekuciKorisnik");
         });
     }
-    
+
     function sakrijLogout() {
-        if (localStorage.getItem("tekuciKorisnik") == null) {            
+        if (localStorage.getItem("tekuciKorisnik") == null) {
             $("#odjava").text(messages.LOGIN);
             $("#moj-nalog").hide();
             $("#dodaj-recept").hide();
