@@ -340,13 +340,13 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 2,
-                        text: "evo jedan komentar i od mene"
+                        text: "one comment from me"
                     }, {
                         idUser:1,
-                        text: "drugi komentar"
+                        text: "second comment"
                     }, {
                         idUser: 3,
-                        text: "mnogo dobre palačinke"
+                        text: "very good pancakes"
                     }
                 ],
                 reviews: []
@@ -366,11 +366,11 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 4,
-                        text: "Savrsen recept bravo"
+                        text: "great recipe"
                     },
                     {
                         idUser: 2,
-                        text: "Odlican recept. Bas onako kako treba da se radi. Sve pohvale."
+                        text: "excellent recipe."
                     }
                 ],
                 reviews: [
@@ -395,11 +395,11 @@ function loadOrInitRecipes() {
                 comments: [
                     {
                         idUser: 3,
-                        text: "Isprobano i samo mogu reći svaka čast sve je kako pise!!!"
+                        text: "delicious!!!"
                     },
                     {
                         idUser: 2,
-                        text: "Hvala svima na lepim komentarima!"
+                        text: "thank you for great comments!"
                     }
                 ],
                 reviews: [
@@ -411,6 +411,36 @@ function loadOrInitRecipes() {
                         mark: 4
                     }
                 ]
+            }, {
+                id: 18,
+                language: "en",
+                name: "Ham and cheese apple wraps",
+                duration: "1h",
+                description: "Ham and cheese apple wraps are a delicious combination of savory and sweet that you can pack in the lunchbox or serve for a high-protein snack! I’ve made grilled ham & cheese sandwiches for years, but these apple wraps are a low-carb version that’s light and satisfying with crunchy, tangy-sweet flavors. Ham and cheese apple wraps are a delicious combination of savory and sweet that you can pack in the lunchbox or serve for a high-protein snack! I’ve made grilled ham & cheese sandwiches for years, but these apple wraps are a low-carb version that’s light and satisfying with crunchy, tangy-sweet flavors. lunch container with blueberries and snap peas. Largest part of the container holds apple and cheese slices wrapped with ham. These apple wraps are an easy lunch option that will fill you up without weighing you down, and they’re quick to assemble. Since apples are notorious for browning, use my trick to prevent apple slices from browning before wrapping them with cheese and ham. You can also swap the ham for sliced deli turkey and use any cheese that pairs well with fruit. My favorite options are Gouda, Cheddar, and Colby Jack. These apple wraps can be prepared the night before and packed into lunch containers along with a boiled egg for additional protein, whole-grain crackers, veggies, and hummus for dipping.",
+                type: "P",
+                level: 2,
+                idUser: 3,
+                comments: [],
+                reviews: [
+                    {
+                        idUser: 3,
+                        mark: 2
+                    }, {
+                        idUser: 3,
+                        mark: 4
+                    }
+                ]
+            }, {
+                id: 19,
+                language: "en",
+                name: "Spanish tortilla",
+                duration: "50min",
+                description: "This classic Spanish dish is very versatile and quick to whip up. The tortilla (or Spanish omelette) can be served hot or cold and is a fantastic way of using up all kinds of ingredients – simply add in any leftover vegetables, crumbled or grated cheese, jarred red peppers or cooked sausage. They’ll all taste great, so get experimenting! Peel the potatoes using a speed-peeler, then carefully cut them into thin slices. Pat the potato slices dry with a clean tea towel.  Peel and finely slice the onion. Drizzle 2 tablespoons of oil into a small frying pan over a medium heat, then add the onion and potatoes. Turn the heat down to low and cook for 25 to 30 minutes, or until the onions are turning golden and the potato slices are cooked through. Try not to stir it too much or the potatoes will break up – just use a fish slice to flip them over halfway through. Crack the eggs into a mixing bowl, season with a tiny pinch of sea salt and black pepper, then whisk together with a fork. When the onions and potatoes are cooked, remove the pan from the heat and carefully tip them into the eggs. Transfer the mixture back into the frying pan and place it over a low heat. Cook for around 20 minutes, or until there’s almost no runny egg on top.  Use a fish slice to slightly lift and loosen the sides of the tortilla. Carefully flip the pan over a dinner plate and tip out the tortilla, then slide it back into the pan and cook for another 5 minutes, or until golden and cooked through. Turn out the tortilla onto a serving board, then cut into 6 wedges and serve hot or cold with a simple green salad.",
+                type: "U",
+                level: 1,
+                idUser: 2,
+                comments: [],
+                reviews: []
             }
         ];
         localStorage.setItem("recipes", JSON.stringify(recipes));
