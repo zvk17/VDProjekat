@@ -10,7 +10,7 @@ $(document).ready(function () {
                 url = url.replace("index_en.html", "index.html");
             }
             window.location.href = url;
-        }
+        }   
     });
 
     $("#engleski").click(function() {
