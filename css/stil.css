@@ -1,16 +1,20 @@
 .container-fluid {
-    min-height: 99vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
 }
 
 .footer {
-    margin-top: 50px;    
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    margin-top: 50px;
     text-align: center;
     background-color: #343a40;
     color: lightgray;
     border-top: 5px solid grey;
-    font-size: 14px; 
+    font-size: 14px;
 }
 .moj-nalog-footer {
     margin-top: 100px;
@@ -23,7 +27,7 @@
 .blog-slika {
     object-fit: cover;
     /* width: 400px;   */
-    height: 200px; 
+    height: 200px;
     border-radius: 5px;
 }
 
@@ -43,7 +47,7 @@
     color: #fff;
     background: black;
     font-size: 10px;
-    font-weight: 600;   
+    font-weight: 600;
     padding: 2px 5px;
     text-align: center;
     min-width: 20px;
@@ -59,7 +63,7 @@
     position: absolute;
     bottom: -6px;
     left: 35%;
-    
+
 }
 .recipe-item {
     margin-top: 14px;
@@ -67,7 +71,7 @@
     padding: 0;
     background: rgb(240, 240, 240);
     border: 1px solid rgb(220, 220, 220);
-    transition: 300ms background, 300ms border;   
+    transition: 300ms background, 300ms border;
 }
 .recipe-item h3 {
     margin: 0;
@@ -138,11 +142,11 @@
 }
 
 #autori, #fakultet {
-    font-size: 15px;    
+    font-size: 15px;
 }
 
 #circle-inicijali {
-    width: 50%;    
+    width: 50%;
     border-radius: 50%;
 
     text-align: center;
@@ -214,7 +218,7 @@ h1 {
     object-fit: cover;
     width: 100%;
     /* width: 400px;   */
-    height: 200px; 
+    height: 200px;
     border-radius: 5px;
 }
 
@@ -244,7 +248,7 @@ h1 {
 .ads img {
     max-width: 100%;
     margin: 14px 0;
-    
+
 }
 .ads-recipe-page {
     margin-top: 106px!important;
