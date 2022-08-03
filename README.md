@@ -1,1 +1,3 @@
-# VDProjekat
+# Web sajt za kuvarske recepte
+Projekat iz predmeta Veb Dizajn
+
