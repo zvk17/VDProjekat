@@ -1,3 +1,3 @@
-# Web sajt za kuvarske recepte
+# Veb sajt za kuvarske recepte
 Projekat iz predmeta Veb Dizajn
 
